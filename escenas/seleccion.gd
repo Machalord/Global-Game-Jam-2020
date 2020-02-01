@@ -15,8 +15,4 @@ func _process(delta):
 	var pos
 	pos=tilemap.world_to_map(get_local_mouse_position())
 	var pos2=tilemap.map_to_world(pos)
-#	print(pos)
-#	pos2.x=pos2.x*$TileMap.cell_size.x
-#	pos2.y=pos2.y*$TileMap.cell_size.x
-	print(pos)
 	$Sprite.global_position=pos2+Vector2(-128,0)

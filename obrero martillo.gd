@@ -7,7 +7,7 @@ func SetPosicion(pos):
 func GetMapaPos():
 	return mapaPos
 
-var duration = 3
+var duration = 10
 
 func _process(delta):
 	duration -= delta
