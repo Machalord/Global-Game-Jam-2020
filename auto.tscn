@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://auto.gd" type="Script" id=1]
 [ext_resource path="res://auto.png" type="Texture" id=2]
+[ext_resource path="res://caritas.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 39.7271
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 26.3555
 
 [node name="auto" type="Sprite"]
 scale = Vector2( 0.443907, 0.443907 )
@@ -25,7 +29,23 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 63.1813, -45.0802 )
 shape = SubResource( 1 )
+
+[node name="Area2D3" type="Area2D" parent="." groups=[
+"borrar",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( -9.1615, -10.1794 )
+shape = SubResource( 2 )
+
+[node name="caritas" type="Sprite" parent="."]
+position = Vector2( -9.1615, -76.1409 )
+scale = Vector2( 0.627582, 0.627582 )
+texture = ExtResource( 3 )
+hframes = 3
+frame = 2
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="Area2D2" to="." method="_on_Area2D2_area_entered"]
 [connection signal="area_exited" from="Area2D2" to="." method="_on_Area2D2_area_exited"]
+[connection signal="area_entered" from="Area2D3" to="." method="_on_Area2D3_area_entered"]

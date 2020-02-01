@@ -27,30 +27,49 @@ func OnClick(position):
 			break
 	
 	if not ocupado:
-		match(id):
-			0:#ES UN TILE NORMAL
-				if menuSelection == 0 and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-					Global.money -=10
-					var spawn = conoInstance.instance()
-					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-					spawn.SetPosicion(mapPos)
-					add_child(spawn)
-			1:#sSI ES UN TILE DE BACHE
-				if menuSelection == 0 and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-					Global.money -=10
-					var spawn = aplanadoraInstance.instance()
-					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-					spawn.get_child(0).SetPosicion(mapPos)
-					add_child(spawn)
-			2:#SI ES UN TILE DESPINTADO
-				if menuSelection == 0 and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-					Global.money -=10
-					var spawn = volcadorInstance.instance()
-					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-					spawn.get_child(0).SetPosicion(mapPos)
-					add_child(spawn)
+		if Global.herramienta == Herramienta.cono and Global.money > 10 and Global.actionTimer < 0:
+			var hayCono = false;
+			for n in get_tree().get_nodes_in_group("Conos"):
+				if n.isMouseOver() :
+					hayCono = true
+					break
+			if(!hayCono):
+				Global.money -=10
+				Global.actionTimer = 0.2
+				var spawn = conoInstance.instance()
+				spawn.position = position
+				add_child(spawn)
+		else:
+			match(id):
+				1:#sSI ES UN TILE DE BACHE
+					if Global.herramienta == Herramienta.volcador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
+						Global.money -=10
+						Global.actionTimer = 0.2
+						var spawn = aplanadoraInstance.instance()
+						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+						spawn.get_child(0).SetPosicion(mapPos)
+						add_child(spawn)
+				2:#SI ES UN TILE DESPINTADO
+					if Global.herramienta == Herramienta.pintadora and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
+						Global.money -=10
+						Global.actionTimer = 0.2
+						var spawn = volcadorInstance.instance()
+						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+						spawn.get_child(0).SetPosicion(mapPos)
+						add_child(spawn)
 	pass
 
-var tileMapSelect = 0
-var menuSelection = 0
+enum TileTipe{
+	tierra = 1,
+	despintado = 2,
+	bache = 3,
+	normal = 4
+}
 
+enum Herramienta{
+	obrero = 1,
+	aplanadoraRapida = 2,
+	pintadora = 3,
+	cono = 4,
+	volcador = 5
+}

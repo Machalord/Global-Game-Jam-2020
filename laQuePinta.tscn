@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://laQuePinta.png" type="Texture" id=1]
+[ext_resource path="res://vacio.png" type="Texture" id=2]
+[ext_resource path="res://aplanadora.gd" type="Script" id=3]
+
+[node name="laquepinta" type="Sprite"]
+position = Vector2( 1022.7, 64.378 )
+texture = ExtResource( 2 )
+
+[node name="laquepinta" type="Sprite" parent="." groups=[
+"Ocupados",
+]]
+position = Vector2( 44.5414, -8.78208 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
