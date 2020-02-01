@@ -3,7 +3,7 @@ extends Sprite
 
 var direction = true
 var andar = true
-var modelo
+var modelo = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -32,12 +32,12 @@ func _process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("cono") or area.is_in_group("auto"):
+	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
 		andar=false
 	pass # Replace with function body.
 
 
 func _on_Area2D_area_exited(area):
-	if area.is_in_group("cono") or area.is_in_group("auto"):
+	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
 		andar=true
 	pass # Replace with function body.
