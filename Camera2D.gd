@@ -105,7 +105,7 @@ func _on_Areaup_area_entered(area):
 
 func _on_Areaup_area_exited(area):
 	if area.is_in_group("areaup"):
-		areadown=false
+		areaup=false
 	pass # Replace with function body.
 
 

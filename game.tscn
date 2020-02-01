@@ -18,21 +18,21 @@ extents = Vector2( 49.6951, 359.251 )
 extents = Vector2( 49.9404, 347.989 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 649.449, 42.0811 )
+extents = Vector2( 649.449, 123.572 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 633.626, 47.3554 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 100.468, 1257.16 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 126.418, 1345.27 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 1896, 129.556 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 2036.91, 152.436 )
 
 [node name="game" type="Node2D"]
@@ -112,14 +112,14 @@ shape = SubResource( 1 )
 position = Vector2( -3.63156, -0.984131 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/AreaDer"]
-position = Vector2( 575.824, 0 )
+position = Vector2( 592.092, -9.76062 )
 shape = SubResource( 2 )
 
 [node name="Areaup" type="Area2D" parent="Node2D"]
 position = Vector2( -3.63156, -0.984131 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areaup"]
-position = Vector2( 0, 316.456 )
+position = Vector2( -9.6004, 207.993 )
 shape = SubResource( 3 )
 
 [node name="Areadown" type="Area2D" parent="Node2D"]
@@ -153,7 +153,7 @@ position = Vector2( -1332.82, 1223.44 )
 position = Vector2( -1614.89, 614.523 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limiteizq"]
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="limiteder" type="Area2D" parent="." groups=[
 "areader",
@@ -161,7 +161,7 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limiteder"]
 position = Vector2( 2122.13, 718.074 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="limitearriba" type="Area2D" parent="." groups=[
 "areaup",
@@ -169,7 +169,7 @@ shape = SubResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limitearriba"]
 position = Vector2( 278.184, -526.242 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="limiteabajo" type="Area2D" parent="." groups=[
 "areadown",
@@ -177,7 +177,7 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limiteabajo"]
 position = Vector2( 278.184, 1527.25 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="seleccion" parent="." instance=ExtResource( 8 )]
 [connection signal="area_entered" from="Node2D/AreaIzq" to="Node2D" method="_on_AreaIzq_area_entered"]
