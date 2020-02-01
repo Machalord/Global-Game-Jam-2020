@@ -60,12 +60,12 @@ position = Vector2( -85.6195, 49.0965 )
 position = Vector2( 116.842, -36.523 )
 shape = SubResource( 3 )
 
-[node name="Area2D" type="Area2D" parent="." groups=[
+[node name="AreaExterma" type="Area2D" parent="." groups=[
 "volcador",
 ]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -32.3318, 43.7078 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaExterma"]
+position = Vector2( -32.3318, 44.9355 )
 shape = SubResource( 4 )
 [connection signal="animation_finished" from="volcador/AnimationPlayer" to="volcador" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="volcador/Area2D" to="volcador" method="_on_Area2D_area_entered"]
