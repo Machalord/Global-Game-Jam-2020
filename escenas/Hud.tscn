@@ -426,6 +426,7 @@ scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="buttons2" type="Node2D" parent="buttons"]
+visible = false
 position = Vector2( 246.927, 246.927 )
 
 [node name="button11" parent="buttons/buttons2" instance=ExtResource( 11 )]
@@ -469,7 +470,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 12 )
 
 [node name="buttons1" type="Node2D" parent="buttons"]
-visible = false
 
 [node name="button" parent="buttons/buttons1" instance=ExtResource( 11 )]
 margin_left = 42.0

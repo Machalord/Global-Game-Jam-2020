@@ -158,14 +158,7 @@ editor_draw_screen = false
 editor_draw_limits = true
 
 [node name="Hud" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( -654.165, -402.602 )
-z_index = 7
-
-[node name="money" parent="Node2D/Hud" index="0"]
-margin_left = 69.9999
-margin_top = 76.0
-margin_right = 247.0
-margin_bottom = 157.0
+position = Vector2( -640, -360 )
 
 [node name="peaje2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1332.82, 1223.44 )

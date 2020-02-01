@@ -3,6 +3,7 @@ extends Node2D
 var aplanadoraInstance = load("res://aplanadora.tscn")
 var volcadorInstance = load("res://volcador.tscn")
 var conoInstance = load("res://cono.tscn")
+var pintadoraInstance =load("res://laQuePinta.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,7 +46,7 @@ func OnClick(position):
 					if Global.herramienta == Herramienta.volcador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
 						Global.money -=10
 						Global.actionTimer = 0.2
-						var spawn = aplanadoraInstance.instance()
+						var spawn = volcadorInstance.instance()
 						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
 						spawn.get_child(0).SetPosicion(mapPos)
 						add_child(spawn)
@@ -53,7 +54,7 @@ func OnClick(position):
 					if Global.herramienta == Herramienta.pintadora and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
 						Global.money -=10
 						Global.actionTimer = 0.2
-						var spawn = volcadorInstance.instance()
+						var spawn = pintadoraInstance.instance()
 						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
 						spawn.get_child(0).SetPosicion(mapPos)
 						add_child(spawn)
