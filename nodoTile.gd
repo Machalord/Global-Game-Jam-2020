@@ -6,8 +6,19 @@ var tilemap
 
 func _ready():
 	tilemap = get_node("/root/game/TileMap")
-	cataclismo = rand_range(10,300);
+	RandoRandomizer()
 	pass # Replace with function body.
+
+func RandoRandomizer():
+	var rand1 = rand_range(0,1000);
+	if rand1 > 990:
+		cataclismo = rand_range(10,rand_range(11,2000));
+	elif rand1 > 900:
+		cataclismo = rand_range(10,1000);
+	elif rand1 > 500:
+		cataclismo = rand_range(10,600);
+	else:
+		cataclismo = rand_range(10, 300);
 
 func Comparar(pos):
 	return pos.x == mapPosition.x and pos.y == mapPosition.y
@@ -16,7 +27,7 @@ func Iniciar(posX,posY):
 	mapPosition = Vector2(posX,posY)
 
 func SetTipoTile(tipo):
-	cataclismo = rand_range(10,300);
+	RandoRandomizer()
 	tilemap.set_cellv(mapPosition,tipo)
 
 func _process(delta):
