@@ -6,7 +6,7 @@ extends Node
 # var b = "text"
 
 var money
-var herramienta = 3
+var herramienta = 0
 var actionTimer = -1
 
 # Called when the node enters the scene tree for the first time.

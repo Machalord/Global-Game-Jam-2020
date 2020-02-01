@@ -19,7 +19,7 @@ extents = Vector2( 49.6951, 359.251 )
 extents = Vector2( 49.9404, 347.989 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 649.449, 123.572 )
+extents = Vector2( 649.449, 114.495 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 633.626, 47.3554 )
@@ -258,7 +258,7 @@ shape = SubResource( 2 )
 position = Vector2( -3.63156, -0.984131 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areaup"]
-position = Vector2( -9.6004, 207.993 )
+position = Vector2( -4.32611, 315.236 )
 shape = SubResource( 3 )
 
 [node name="Areadown" type="Area2D" parent="Node2D"]
@@ -274,14 +274,8 @@ editor_draw_screen = false
 editor_draw_limits = true
 
 [node name="Hud" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( -654.165, -402.602 )
-z_index = 7
-
-[node name="money" parent="Node2D/Hud" index="0"]
-margin_left = 69.9999
-margin_top = 76.0
-margin_right = 247.0
-margin_bottom = 157.0
+position = Vector2( -640, -360 )
+z_index = 20
 
 [node name="peaje2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1332.82, 1223.44 )

@@ -10,7 +10,7 @@ func _process(delta):
 	randomize()
 	num = int(rand_range(200,400))
 	
-	if num==200 and tiempoentreautos:
+	if num==200 and tiempoentreautos and get_tree().get_nodes_in_group("autos").size()<150:
 		tiempoentreautos=false
 		$Timer.start()
 		var newauto=auto.instance()

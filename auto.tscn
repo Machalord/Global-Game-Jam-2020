@@ -14,7 +14,9 @@ radius = 26.2119
 [sub_resource type="CircleShape2D" id=3]
 radius = 26.3555
 
-[node name="auto" type="Sprite"]
+[node name="auto" type="Sprite" groups=[
+"auto",
+]]
 scale = Vector2( 0.443907, 0.443907 )
 texture = ExtResource( 2 )
 vframes = 6
