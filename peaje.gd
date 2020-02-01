@@ -26,6 +26,7 @@ func _on_Area2D_area_entered(area):
 func _on_Timer_timeout():
 	$Area2D.position=$Position2D2.position
 	frame=1
+	
 	if $Timer2.is_stopped():
 			$Timer2.start()
 	pass # Replace with function body.
