@@ -70,6 +70,8 @@ func _on_Area2D_area_entered(area):
 			Global.money += pago
 			pagado=true
 			instance_dolar()
+	if area.is_in_group("baila"):
+		amor=15
 	pass # Replace with function body.
 
 
@@ -90,6 +92,8 @@ func _on_Area2D2_area_entered(area):
 			Global.money += pago
 			pagado=true
 			instance_dolar()
+	if area.is_in_group("baila"):
+		amor=15
 	pass # Replace with function body.
 
 
