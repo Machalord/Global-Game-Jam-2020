@@ -5,7 +5,7 @@
 [ext_resource path="res://aplanadora.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 37.0216
+radius = 19.9337
 
 [node name="aplanadora" type="Sprite"]
 position = Vector2( 1022.7, 64.378 )
