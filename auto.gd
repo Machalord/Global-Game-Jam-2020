@@ -36,6 +36,7 @@ func _process(delta):
 			$Timer.start()
 	if explotar:
 		andar=false
+
 		$explosion/explosion/AnimationPlayer.play("explosion")
 		
 	if amor > 12:
@@ -54,6 +55,8 @@ func _process(delta):
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
 		andar=false
+	if area.is_in_group("maquina"):
+		explotar=true
 	if area.is_in_group("peaje"):
 		andar=false
 		Global.money += pago
@@ -71,11 +74,14 @@ func _on_Area2D2_area_entered(area):
 		andar=false
 	if area.is_in_group("maquina"):
 		explotar=true
+	if area.is_in_group("peaje"):
+		andar=false
+		Global.money += pago
 	pass # Replace with function body.
 
 
 func _on_Area2D2_area_exited(area):
-	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
+	if area.is_in_group("cono") or area.is_in_group("atrasauto")or area.is_in_group("peaje"):
 		andar=true
 	if area.is_in_group("maquina"):
 		explotar=true
