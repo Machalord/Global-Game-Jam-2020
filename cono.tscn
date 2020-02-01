@@ -6,7 +6,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 22.5929
 
-[node name="cono" type="Sprite"]
+[node name="cono" type="Sprite" groups=[
+"Ocupados",
+]]
 position = Vector2( 232.663, 409.55 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
