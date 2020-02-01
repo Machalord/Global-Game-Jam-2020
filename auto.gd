@@ -42,7 +42,7 @@ func _process(delta):
 		$caritas.frame = 0
 	if amor <=12 and amor > 4:
 		$caritas.frame = 1
-	if amor <=6:
+	if amor <=4:
 		$caritas.frame = 2
 
 #	pass
