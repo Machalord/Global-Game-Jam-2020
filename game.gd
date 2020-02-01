@@ -9,10 +9,9 @@ func _ready():
 	Global.money = 500
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Camera2D/Label.text = "Guita: "+String(Global.money)
+
 	if Input.is_action_just_pressed("MouseLeftClick"):
 		OnClick(get_global_mouse_position())
 	pass

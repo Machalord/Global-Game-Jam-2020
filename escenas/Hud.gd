@@ -10,7 +10,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-#	$money/Label.text="$"+str(Global.money)
+	$money/Label.text="$"+str(Global.money)
 #	if get_global_mouse_position().y>position.y+700 and !show:
 #		$AnimationPlayer.play("show")
 #		show=true
