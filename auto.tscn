@@ -8,10 +8,10 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 25.7801
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=2]
 radius = 26.2119
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 radius = 26.3555
 
 [node name="auto" type="Sprite"]
@@ -31,8 +31,8 @@ shape = SubResource( 1 )
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 43.2626, -31.0473 )
-shape = SubResource( 3 )
+position = Vector2( 42.7536, -31.0473 )
+shape = SubResource( 2 )
 
 [node name="Area2D3" type="Area2D" parent="." groups=[
 "borrar",
@@ -40,7 +40,7 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2( -9.1615, -10.1794 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="caritas" type="Sprite" parent="."]
 position = Vector2( -9.1615, -76.1409 )

@@ -26,7 +26,7 @@ func _process(delta):
 		get_parent().queue_free()
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("volcador"):
+	if area.is_in_group("volcador") and area == get_parent().get_child(1):
 		andar=false
 	pass # Replace with function body.
 
