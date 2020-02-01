@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/hud_money.png" type="Texture" id=1]
 [ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=2]
@@ -25,23 +25,95 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="Hud" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
+[sub_resource type="Animation" id=3]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/path = NodePath("panels:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 555 ), Vector2( 0, 691.761 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("panel_buttons:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 36 ), Vector2( 0, 173.761 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("buttons:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 36 ), Vector2( 0, 173.761 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("buttons:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 173.761 ), Vector2( 0, 36 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("panel_buttons:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 173.761 ), Vector2( 0, 36 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("panels:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 691.761 ), Vector2( 0, 555 ) ]
+}
+
+[node name="Hud" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="money" type="TextureRect" parent="."]
 anchor_left = 0.831
 anchor_top = 0.049
 anchor_right = 0.969
 anchor_bottom = 0.162
-margin_left = -0.392944
-margin_top = 0.197979
-margin_right = -0.032959
-margin_bottom = -0.162018
+margin_left = -998.68
+margin_top = 3.198
+margin_right = -998.32
+margin_bottom = 2.838
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -66,15 +138,14 @@ __meta__ = {
 }
 
 [node name="panels" type="Control" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchor_top = 0.719
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -640.0
-margin_top = -202.0
-margin_right = 640.0
+margin_top = 691.761
+margin_bottom = 691.761
+mouse_filter = 1
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="panel2" type="Node2D" parent="panels"]
@@ -160,6 +231,7 @@ __meta__ = {
 }
 
 [node name="panel_buttons" type="Node2D" parent="."]
+position = Vector2( 0, 173.761 )
 z_index = 31
 
 [node name="Button" type="Button" parent="panel_buttons"]
@@ -286,8 +358,9 @@ __meta__ = {
 }
 
 [node name="buttons" type="Control" parent="."]
+margin_top = 173.761
 margin_right = 40.0
-margin_bottom = 40.0
+margin_bottom = 213.761
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -333,6 +406,11 @@ margin_right = 558.0
 margin_bottom = 671.0
 price = 1000
 texture = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 3.0
+anims/hide = SubResource( 3 )
+anims/show = SubResource( 4 )
 [connection signal="pressed" from="panel_buttons/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="panel_buttons/Button2" to="." method="_on_Button_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="panel_buttons/Button3" to="." method="_on_Button_pressed" binds= [ 3 ]]

@@ -34,6 +34,6 @@ func _on_Area2D_area_entered(area):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	andar = true
 	var tilemap = get_node("/root/game/TileMap")
-	tilemap.set_cellv(mapaPos,0)
+	tilemap.SetNodeTipe(mapaPos,0)
 	transparencia=true
 	pass # Replace with function body.
