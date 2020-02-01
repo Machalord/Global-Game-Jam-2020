@@ -6,6 +6,8 @@ var andar = true
 var modelo = 0
 var explotar = false
 var pago = 0
+var dolar=preload("res://dolar.tscn")
+var pagado = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -42,6 +44,7 @@ func _process(delta):
 	if amor > 12:
 		$caritas.frame = 0
 		pago = 5
+		
 	if amor <=12 and amor > 4:
 		$caritas.frame = 1
 		pago=3
@@ -50,7 +53,10 @@ func _process(delta):
 		pago = 1
 
 #	pass
-
+func instance_dolar():
+	var pagado=dolar.instance()
+	pagado.position = Vector2(position.x,position.y-50)
+	get_parent().add_child(pagado)
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
@@ -59,7 +65,10 @@ func _on_Area2D_area_entered(area):
 		explotar=true
 	if area.is_in_group("peaje"):
 		andar=false
-		Global.money += pago
+		if !pagado:
+			Global.money += pago
+			pagado=true
+			instance_dolar()
 	pass # Replace with function body.
 
 
@@ -76,7 +85,10 @@ func _on_Area2D2_area_entered(area):
 		explotar=true
 	if area.is_in_group("peaje"):
 		andar=false
-		Global.money += pago
+		if !pagado:
+			Global.money += pago
+			pagado=true
+			instance_dolar()
 	pass # Replace with function body.
 
 

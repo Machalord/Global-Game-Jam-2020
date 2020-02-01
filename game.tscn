@@ -120,6 +120,122 @@ position = Vector2( 744.179, 295.132 )
 z_index = 2
 texture = ExtResource( 5 )
 
+[node name="tree10" type="Sprite" parent="."]
+position = Vector2( -134.545, 990.047 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree9" type="Sprite" parent="."]
+position = Vector2( -600.54, 670.656 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree8" type="Sprite" parent="."]
+position = Vector2( -341.235, 524.639 )
+scale = Vector2( 0.675156, 0.685308 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree7" type="Sprite" parent="."]
+position = Vector2( 231.855, 950.587 )
+scale = Vector2( 0.616451, 0.704654 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree6" type="Sprite" parent="."]
+position = Vector2( -88.0455, 726.656 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree15" type="Sprite" parent="."]
+position = Vector2( -798.955, 1305.13 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree14" type="Sprite" parent="."]
+position = Vector2( -1264.95, 985.737 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree13" type="Sprite" parent="."]
+position = Vector2( -1005.64, 839.72 )
+scale = Vector2( 0.675156, 0.685308 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree12" type="Sprite" parent="."]
+position = Vector2( -432.554, 1265.67 )
+scale = Vector2( 0.616451, 0.704654 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree11" type="Sprite" parent="."]
+position = Vector2( -752.455, 1041.74 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree20" type="Sprite" parent="."]
+position = Vector2( 1231.95, 322.212 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree19" type="Sprite" parent="."]
+position = Vector2( 765.951, 2.82141 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree18" type="Sprite" parent="."]
+position = Vector2( 1025.26, -143.196 )
+scale = Vector2( 0.675156, 0.685308 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree17" type="Sprite" parent="."]
+position = Vector2( 1598.35, 282.752 )
+scale = Vector2( 0.616451, 0.704654 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree16" type="Sprite" parent="."]
+position = Vector2( 1278.45, 58.8214 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree25" type="Sprite" parent="."]
+position = Vector2( 1896.36, -9.99245 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree24" type="Sprite" parent="."]
+position = Vector2( 1430.36, -329.383 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree23" type="Sprite" parent="."]
+position = Vector2( 1689.67, -475.4 )
+scale = Vector2( 0.675156, 0.685308 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree22" type="Sprite" parent="."]
+position = Vector2( 2262.76, -49.4524 )
+scale = Vector2( 0.616451, 0.704654 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree21" type="Sprite" parent="."]
+position = Vector2( 1942.86, -273.383 )
+z_index = 2
+texture = ExtResource( 5 )
+
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 522.385, 402.602 )
 script = ExtResource( 6 )
