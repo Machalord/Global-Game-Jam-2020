@@ -6,6 +6,7 @@ var llamarTween = false
 var alpha = 1.2
 var desvanecer=false
 var posaux
+var valor=0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	tween = get_node("Tween") 
@@ -15,6 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$Label.text="$"+String(valor)
 	if !llamarTween:
 		tween.interpolate_property(self, "position",position, posaux, 1, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		tween.start()

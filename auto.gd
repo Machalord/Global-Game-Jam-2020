@@ -56,6 +56,7 @@ func _process(delta):
 func instance_dolar():
 	var pagado=dolar.instance()
 	pagado.position = Vector2(position.x,position.y-50)
+	pagado.valor=pago
 	get_parent().add_child(pagado)
 
 func _on_Area2D_area_entered(area):

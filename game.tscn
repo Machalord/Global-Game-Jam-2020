@@ -19,7 +19,7 @@ extents = Vector2( 49.6951, 359.251 )
 extents = Vector2( 49.9404, 347.989 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 649.449, 114.495 )
+extents = Vector2( 649.449, 41.182 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 633.626, 47.3554 )
@@ -278,6 +278,7 @@ position = Vector2( -3.63156, -0.984131 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControl/Areaup"]
 position = Vector2( -4.32611, 315.236 )
+
 shape = SubResource( 3 )
 
 [node name="Areadown" type="Area2D" parent="CameraControl"]
