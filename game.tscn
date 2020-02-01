@@ -91,218 +91,211 @@ position = Vector2( 191.684, 441.102 )
 [node name="cono2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1041.92, 333.632 )
 
-[node name="tree" type="Sprite" parent="."]
-position = Vector2( 697.679, 558.523 )
+[node name="trees" type="Node2D" parent="."]
+position = Vector2( 791.898, 593.607 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="tree" type="Sprite" parent="trees"]
+position = Vector2( -125.625, -46.7786 )
+scale = Vector2( 1.33333, 1.33333 )
 z_index = 2
 texture = ExtResource( 5 )
 
-[node name="tree3" type="Sprite" parent="."]
-position = Vector2( 231.684, 239.132 )
+[node name="tree3" type="Sprite" parent="trees"]
+position = Vector2( -746.952, -472.633 )
+scale = Vector2( 1.33333, 1.33333 )
 z_index = 2
 texture = ExtResource( 5 )
 
-[node name="tree4" type="Sprite" parent="."]
-position = Vector2( 490.99, 93.1149 )
-scale = Vector2( 0.675156, 0.685308 )
-z_index = 2
-texture = ExtResource( 5 )
-flip_h = true
-
-[node name="tree5" type="Sprite" parent="."]
-position = Vector2( 1064.08, 519.063 )
-scale = Vector2( 0.616451, 0.704654 )
-z_index = 2
-texture = ExtResource( 5 )
-flip_h = true
-
-[node name="tree2" type="Sprite" parent="."]
-position = Vector2( 744.179, 295.132 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree10" type="Sprite" parent="."]
-position = Vector2( -134.545, 990.047 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree9" type="Sprite" parent="."]
-position = Vector2( -600.54, 670.656 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree8" type="Sprite" parent="."]
-position = Vector2( -341.235, 524.639 )
-scale = Vector2( 0.675156, 0.685308 )
+[node name="tree4" type="Sprite" parent="trees"]
+position = Vector2( -401.211, -667.323 )
+scale = Vector2( 0.900208, 0.913744 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree7" type="Sprite" parent="."]
-position = Vector2( 231.855, 950.587 )
-scale = Vector2( 0.616451, 0.704654 )
+[node name="tree5" type="Sprite" parent="trees"]
+position = Vector2( 362.909, -99.392 )
+scale = Vector2( 0.821935, 0.939539 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree6" type="Sprite" parent="."]
-position = Vector2( -88.0455, 726.656 )
+[node name="tree2" type="Sprite" parent="trees"]
+position = Vector2( -63.6253, -397.967 )
+scale = Vector2( 1.33333, 1.33333 )
 z_index = 2
 texture = ExtResource( 5 )
 
-[node name="tree15" type="Sprite" parent="."]
-position = Vector2( -798.955, 1305.13 )
+[node name="tree10" type="Sprite" parent="trees"]
+position = Vector2( -1235.26, 528.587 )
+scale = Vector2( 1.33333, 1.33333 )
 z_index = 2
 texture = ExtResource( 5 )
 
-[node name="tree14" type="Sprite" parent="."]
-position = Vector2( -1264.95, 985.737 )
+[node name="tree9" type="Sprite" parent="trees"]
+position = Vector2( -1856.58, 102.732 )
+scale = Vector2( 1.33333, 1.33333 )
 z_index = 2
 texture = ExtResource( 5 )
 
-[node name="tree13" type="Sprite" parent="."]
-position = Vector2( -1005.64, 839.72 )
-scale = Vector2( 0.675156, 0.685308 )
-z_index = 2
-texture = ExtResource( 5 )
-flip_h = true
-
-[node name="tree12" type="Sprite" parent="."]
-position = Vector2( -432.554, 1265.67 )
-scale = Vector2( 0.616451, 0.704654 )
+[node name="tree8" type="Sprite" parent="trees"]
+position = Vector2( -1510.84, -91.9573 )
+scale = Vector2( 0.900208, 0.913744 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree11" type="Sprite" parent="."]
-position = Vector2( -752.455, 1041.74 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree20" type="Sprite" parent="."]
-position = Vector2( 1231.95, 322.212 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree19" type="Sprite" parent="."]
-position = Vector2( 765.951, 2.82141 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree18" type="Sprite" parent="."]
-position = Vector2( 1025.26, -143.196 )
-scale = Vector2( 0.675156, 0.685308 )
+[node name="tree7" type="Sprite" parent="trees"]
+position = Vector2( -746.724, 475.973 )
+scale = Vector2( 0.821935, 0.939539 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree17" type="Sprite" parent="."]
-position = Vector2( 1598.35, 282.752 )
-scale = Vector2( 0.616451, 0.704654 )
+[node name="tree6" type="Sprite" parent="trees"]
+position = Vector2( -1173.26, 177.399 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree15" type="Sprite" parent="trees"]
+position = Vector2( -2121.14, 948.697 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree14" type="Sprite" parent="trees"]
+position = Vector2( -2742.46, 522.84 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree13" type="Sprite" parent="trees"]
+position = Vector2( -2396.72, 328.151 )
+scale = Vector2( 0.900208, 0.913744 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree16" type="Sprite" parent="."]
-position = Vector2( 1278.45, 58.8214 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree25" type="Sprite" parent="."]
-position = Vector2( 1896.36, -9.99245 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree24" type="Sprite" parent="."]
-position = Vector2( 1430.36, -329.383 )
-z_index = 2
-texture = ExtResource( 5 )
-
-[node name="tree23" type="Sprite" parent="."]
-position = Vector2( 1689.67, -475.4 )
-scale = Vector2( 0.675156, 0.685308 )
+[node name="tree12" type="Sprite" parent="trees"]
+position = Vector2( -1632.6, 896.084 )
+scale = Vector2( 0.821935, 0.939539 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree22" type="Sprite" parent="."]
-position = Vector2( 2262.76, -49.4524 )
-scale = Vector2( 0.616451, 0.704654 )
+[node name="tree11" type="Sprite" parent="trees"]
+position = Vector2( -2059.14, 597.511 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree20" type="Sprite" parent="trees"]
+position = Vector2( 586.736, -361.86 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree19" type="Sprite" parent="trees"]
+position = Vector2( -34.596, -787.714 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree18" type="Sprite" parent="trees"]
+position = Vector2( 311.149, -982.404 )
+scale = Vector2( 0.900208, 0.913744 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
-[node name="tree21" type="Sprite" parent="."]
-position = Vector2( 1942.86, -273.383 )
+[node name="tree17" type="Sprite" parent="trees"]
+position = Vector2( 1075.27, -414.473 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree16" type="Sprite" parent="trees"]
+position = Vector2( 648.736, -713.047 )
+scale = Vector2( 1.33333, 1.33333 )
 z_index = 2
 texture = ExtResource( 5 )
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="tree25" type="Sprite" parent="trees"]
+position = Vector2( 1472.62, -804.799 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree24" type="Sprite" parent="trees"]
+position = Vector2( 851.283, -1230.65 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree23" type="Sprite" parent="trees"]
+position = Vector2( 1197.03, -1425.34 )
+scale = Vector2( 0.900208, 0.913744 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree22" type="Sprite" parent="trees"]
+position = Vector2( 1961.15, -857.413 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree21" type="Sprite" parent="trees"]
+position = Vector2( 1534.62, -1155.99 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="CameraControl" type="Node2D" parent="."]
 position = Vector2( 522.385, 402.602 )
 script = ExtResource( 6 )
 
-[node name="AreaIzq" type="Area2D" parent="Node2D"]
+[node name="AreaIzq" type="Area2D" parent="CameraControl"]
 position = Vector2( -602.602, -48.2965 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/AreaIzq"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControl/AreaIzq"]
 position = Vector2( 0, 47.3123 )
 shape = SubResource( 1 )
 
-[node name="AreaDer" type="Area2D" parent="Node2D"]
+[node name="AreaDer" type="Area2D" parent="CameraControl"]
 position = Vector2( -3.63156, -0.984131 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/AreaDer"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControl/AreaDer"]
 position = Vector2( 592.092, -9.76062 )
 shape = SubResource( 2 )
 
-[node name="Areaup" type="Area2D" parent="Node2D"]
+[node name="Areaup" type="Area2D" parent="CameraControl"]
 position = Vector2( -3.63156, -0.984131 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areaup"]
-position = Vector2( 6.22235, 281.833 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControl/Areaup"]
+position = Vector2( -4.32611, 315.236 )
+
 shape = SubResource( 3 )
 
-[node name="Areadown" type="Area2D" parent="Node2D"]
+[node name="Areadown" type="Area2D" parent="CameraControl"]
 position = Vector2( -3.63156, -0.984131 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Areadown"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControl/Areadown"]
 position = Vector2( 0, -319.391 )
 shape = SubResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="Node2D"]
+[node name="Camera2D" type="Camera2D" parent="CameraControl"]
 current = true
 editor_draw_screen = false
 editor_draw_limits = true
 
-[node name="Hud" parent="Node2D" instance=ExtResource( 10 )]
-position = Vector2( -654.165, -402.602 )
-z_index = 7
-
-[node name="money" parent="Node2D/Hud" index="0"]
-margin_left = 69.9999
-margin_top = 76.0
-margin_right = 247.0
-margin_bottom = 157.0
-
-[node name="money_label" parent="Node2D/Hud" index="1"]
-margin_left = 67.8356
-margin_top = 74.6966
-margin_right = 201.835
-margin_bottom = 136.697
-
-[node name="panels" parent="Node2D/Hud" index="2"]
-margin_left = 821.028
-margin_top = 563.312
-margin_right = 821.028
-margin_bottom = 563.312
-
-[node name="panel_buttons" parent="Node2D/Hud" index="3"]
-position = Vector2( 821.029, 44.3121 )
-
-[node name="buttons" parent="Node2D/Hud" index="4"]
-margin_left = 821.029
-margin_top = 44.3121
-margin_right = 861.029
-margin_bottom = 84.3121
+[node name="Hud" parent="CameraControl" instance=ExtResource( 10 )]
+position = Vector2( -640, -360 )
+z_index = 20
 
 [node name="peaje2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1332.82, 1223.44 )
@@ -358,25 +351,23 @@ position = Vector2( 3282.41, -893.989 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource( 10 )
-[connection signal="area_entered" from="Node2D/AreaIzq" to="Node2D" method="_on_AreaIzq_area_entered"]
-[connection signal="area_exited" from="Node2D/AreaIzq" to="Node2D" method="_on_AreaIzq_area_exited"]
-[connection signal="mouse_entered" from="Node2D/AreaIzq" to="Node2D" method="_on_AreaIzq_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D/AreaIzq" to="Node2D" method="_on_AreaIzq_mouse_exited"]
-[connection signal="area_entered" from="Node2D/AreaDer" to="Node2D" method="_on_AreaDer_area_entered"]
-[connection signal="area_exited" from="Node2D/AreaDer" to="Node2D" method="_on_AreaDer_area_exited"]
-[connection signal="mouse_entered" from="Node2D/AreaDer" to="Node2D" method="_on_AreaDer_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D/AreaDer" to="Node2D" method="_on_AreaDer_mouse_exited"]
-[connection signal="area_entered" from="Node2D/Areaup" to="Node2D" method="_on_Areaup_area_entered"]
-[connection signal="area_exited" from="Node2D/Areaup" to="Node2D" method="_on_Areaup_area_exited"]
-[connection signal="mouse_entered" from="Node2D/Areaup" to="Node2D" method="_on_Areaup_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D/Areaup" to="Node2D" method="_on_Areaup_mouse_exited"]
-[connection signal="area_entered" from="Node2D/Areadown" to="Node2D" method="_on_Areadown_area_entered"]
-[connection signal="area_exited" from="Node2D/Areadown" to="Node2D" method="_on_Areadown_area_exited"]
-[connection signal="mouse_entered" from="Node2D/Areadown" to="Node2D" method="_on_Areadown_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D/Areadown" to="Node2D" method="_on_Areadown_mouse_exited"]
+[connection signal="area_entered" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_area_entered"]
+[connection signal="area_exited" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_area_exited"]
+[connection signal="mouse_entered" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_mouse_entered"]
+[connection signal="mouse_exited" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_mouse_exited"]
+[connection signal="area_entered" from="CameraControl/AreaDer" to="CameraControl" method="_on_AreaDer_area_entered"]
+[connection signal="area_exited" from="CameraControl/AreaDer" to="CameraControl" method="_on_AreaDer_area_exited"]
+[connection signal="mouse_entered" from="CameraControl/AreaDer" to="CameraControl" method="_on_AreaDer_mouse_entered"]
+[connection signal="mouse_exited" from="CameraControl/AreaDer" to="CameraControl" method="_on_AreaDer_mouse_exited"]
+[connection signal="area_entered" from="CameraControl/Areaup" to="CameraControl" method="_on_Areaup_area_entered"]
+[connection signal="area_exited" from="CameraControl/Areaup" to="CameraControl" method="_on_Areaup_area_exited"]
+[connection signal="mouse_entered" from="CameraControl/Areaup" to="CameraControl" method="_on_Areaup_mouse_entered"]
+[connection signal="mouse_exited" from="CameraControl/Areaup" to="CameraControl" method="_on_Areaup_mouse_exited"]
+[connection signal="area_entered" from="CameraControl/Areadown" to="CameraControl" method="_on_Areadown_area_entered"]
+[connection signal="area_exited" from="CameraControl/Areadown" to="CameraControl" method="_on_Areadown_area_exited"]
+[connection signal="mouse_entered" from="CameraControl/Areadown" to="CameraControl" method="_on_Areadown_mouse_entered"]
+[connection signal="mouse_exited" from="CameraControl/Areadown" to="CameraControl" method="_on_Areadown_mouse_exited"]
 
 [editable path="peaje3"]
 
 [editable path="peaje4"]
-
-[editable path="Node2D/Hud"]

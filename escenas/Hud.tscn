@@ -394,7 +394,8 @@ margin_left = 42.0
 margin_top = 550.0
 margin_right = 164.0
 margin_bottom = 645.0
-price = 100
+price = 50
+tool_id = 1
 texture = ExtResource( 14 )
 
 [node name="icon" parent="buttons/buttons3/button8" index="0"]
@@ -406,7 +407,8 @@ margin_left = 164.0
 margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
-price = 200
+price = 50
+tool_id = 1
 texture = ExtResource( 14 )
 
 [node name="icon" parent="buttons/buttons3/button7" index="0"]
@@ -418,7 +420,8 @@ margin_left = 286.0
 margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
-price = 300
+price = 50
+tool_id = 1
 texture = ExtResource( 14 )
 
 [node name="icon" parent="buttons/buttons3/button6" index="0"]
@@ -447,7 +450,7 @@ margin_left = -82.927
 margin_top = 303.073
 margin_right = 39.073
 margin_bottom = 398.073
-price = 200
+price = 100
 tool_id = 2
 texture = ExtResource( 15 )
 
@@ -460,7 +463,7 @@ margin_left = 39.073
 margin_top = 303.073
 margin_right = 161.073
 margin_bottom = 398.073
-price = 300
+price = 100
 tool_id = 5
 texture = ExtResource( 12 )
 
@@ -476,7 +479,7 @@ margin_left = 42.0
 margin_top = 550.0
 margin_right = 164.0
 margin_bottom = 645.0
-price = 100
+price = 1
 tool_id = 4
 texture = ExtResource( 10 )
 
@@ -489,7 +492,8 @@ margin_left = 164.0
 margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
-price = 200
+price = 5
+tool_id = 4
 texture = ExtResource( 12 )
 
 [node name="icon" parent="buttons/buttons1/button2" index="0"]
@@ -501,7 +505,8 @@ margin_left = 286.0
 margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
-price = 300
+price = 20
+tool_id = 4
 texture = ExtResource( 13 )
 
 [node name="icon" parent="buttons/buttons1/button3" index="0"]

@@ -4,6 +4,7 @@ var aplanadoraInstance = load("res://aplanadora.tscn")
 var volcadorInstance = load("res://volcador.tscn")
 var conoInstance = load("res://cono.tscn")
 var pintadoraInstance =load("res://laQuePinta.tscn")
+var obreromartilloInstance=load("res://obrero martillo.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,7 +36,7 @@ func OnClick(position):
 					hayCono = true
 					break
 			if(!hayCono):
-				Global.money -=10
+				Global.money -=1
 				Global.actionTimer = 0.2
 				var spawn = conoInstance.instance()
 				spawn.position = position
@@ -44,15 +45,22 @@ func OnClick(position):
 			match(id):
 				1:#sSI ES UN TILE DE BACHE
 					if Global.herramienta == Herramienta.volcador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						Global.money -=10
+						Global.money -=50
 						Global.actionTimer = 0.2
 						var spawn = volcadorInstance.instance()
 						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
 						spawn.get_child(0).SetPosicion(mapPos)
 						add_child(spawn)
+					if Global.herramienta == Herramienta.obreroAplanador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
+						Global.money -=10
+						Global.actionTimer = 0.2
+						var spawn = obreromartilloInstance.instance()
+						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+						spawn.get_child(0).SetPosicion(mapPos)
+						add_child(spawn)	
 				2:#SI ES UN TILE DESPINTADO
 					if Global.herramienta == Herramienta.pintadora and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						Global.money -=10
+						Global.money -=50
 						Global.actionTimer = 0.2
 						var spawn = pintadoraInstance.instance()
 						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
@@ -69,7 +77,7 @@ enum TileTipe{
 }
 
 enum Herramienta{
-	obrero = 1,
+	obreroAplanador = 1,
 	aplanadoraRapida = 2,
 	pintadora = 3,
 	cono = 4,
