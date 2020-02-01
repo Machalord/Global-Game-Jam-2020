@@ -36,7 +36,6 @@ func _process(delta):
 			$Timer.start()
 	if explotar:
 		andar=false
-
 		$explosion/explosion/AnimationPlayer.play("explosion")
 		
 	if amor > 12:
@@ -80,7 +79,7 @@ func _on_Area2D2_area_exited(area):
 		andar=true
 	if area.is_in_group("maquina"):
 		explotar=true
-		area.get_parent().queue_free()
+		area.get_parent().get_parent().queue_free()
 	pass # Replace with function body.
 
 
