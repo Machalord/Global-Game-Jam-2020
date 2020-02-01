@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://button.png" type="Texture" id=1]
+[ext_resource path="res://button1.png" type="Texture" id=2]
+[ext_resource path="res://tile5.png" type="Texture" id=3]
+[ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://escenas/toolbutton.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="button" type="TextureButton"]
+margin_right = 122.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 61.8884, 41.5037 )
+scale = Vector2( 0.287077, 0.323486 )
+texture = ExtResource( 3 )
+
+[node name="label_price" type="Label" parent="."]
+margin_left = 35.9662
+margin_top = 71.1089
+margin_right = 86.9662
+margin_bottom = 91.1089
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "$1000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/hud_money.png" type="Texture" id=1]
 [ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://assets/panel4.png" type="Texture" id=7]
 [ext_resource path="res://assets/panel5.png" type="Texture" id=8]
 [ext_resource path="res://tile1.png" type="Texture" id=9]
+[ext_resource path="res://tile4.png" type="Texture" id=10]
+[ext_resource path="res://escenas/toolbutton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://volcador2.png" type="Texture" id=12]
+[ext_resource path="res://volcador.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -73,37 +77,6 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="panel" type="Node2D" parent="panels"]
-
-[node name="panel" type="TextureRect" parent="panels/panel"]
-modulate = Color( 0.913725, 0.827451, 0.141176, 1 )
-anchor_left = 0.039
-anchor_right = 0.955
-anchor_bottom = 0.901
-margin_left = 50.0
-margin_right = 1223.0
-margin_bottom = 182.0
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="panels/panel/panel"]
-margin_left = 23.0
-margin_top = 51.0
-margin_right = 1148.0
-margin_bottom = 163.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="panels/panel/panel/HBoxContainer"]
-margin_right = 256.0
-margin_bottom = 128.0
-texture_normal = ExtResource( 9 )
-
 [node name="panel2" type="Node2D" parent="panels"]
 position = Vector2( 0, -518 )
 
@@ -159,7 +132,6 @@ __meta__ = {
 position = Vector2( 0, -518 )
 
 [node name="panel5" type="TextureRect" parent="panels/panel5"]
-modulate = Color( 0.92549, 0.827451, 0.8, 1 )
 anchor_left = 0.039
 anchor_right = 0.955
 anchor_bottom = 0.901
@@ -168,6 +140,21 @@ margin_top = 518.0
 margin_right = 1223.0
 margin_bottom = 700.0
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel1" type="Node2D" parent="panels"]
+
+[node name="panel1" type="TextureRect" parent="panels/panel1"]
+modulate = Color( 0.913725, 0.827451, 0.141176, 1 )
+anchor_left = 0.039
+anchor_right = 0.955
+anchor_bottom = 0.901
+margin_left = 50.0
+margin_right = 1223.0
+margin_bottom = 182.0
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -265,11 +252,9 @@ __meta__ = {
 [node name="Label4" type="Label" parent="panel_buttons/Button4"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.08
-margin_right = -0.0800018
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.952941, 0.921569, 0.921569, 1 )
-text = "Milio"
+text = "Workers"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -299,6 +284,55 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons2" type="Node2D" parent="buttons"]
+
+[node name="buttons3" type="Node2D" parent="buttons"]
+
+[node name="buttons4" type="Node2D" parent="buttons"]
+
+[node name="buttons5" type="Node2D" parent="buttons"]
+
+[node name="buttons1" type="Node2D" parent="buttons"]
+
+[node name="button" parent="buttons/buttons1" instance=ExtResource( 11 )]
+margin_left = 70.0
+margin_top = 576.0
+margin_right = 192.0
+margin_bottom = 671.0
+price = 100
+texture = ExtResource( 10 )
+
+[node name="button2" parent="buttons/buttons1" instance=ExtResource( 11 )]
+margin_left = 192.0
+margin_top = 576.0
+margin_right = 314.0
+margin_bottom = 671.0
+price = 200
+texture = ExtResource( 12 )
+
+[node name="button3" parent="buttons/buttons1" instance=ExtResource( 11 )]
+margin_left = 314.0
+margin_top = 576.0
+margin_right = 436.0
+margin_bottom = 671.0
+price = 300
+texture = ExtResource( 13 )
+
+[node name="button4" parent="buttons/buttons1" instance=ExtResource( 11 )]
+margin_left = 436.0
+margin_top = 576.0
+margin_right = 558.0
+margin_bottom = 671.0
+price = 1000
+texture = ExtResource( 9 )
 [connection signal="pressed" from="panel_buttons/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="panel_buttons/Button2" to="." method="_on_Button_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="panel_buttons/Button3" to="." method="_on_Button_pressed" binds= [ 3 ]]
