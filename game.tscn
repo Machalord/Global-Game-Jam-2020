@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://spawnAutos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
@@ -7,8 +7,8 @@
 [ext_resource path="res://tree.png" type="Texture" id=5]
 [ext_resource path="res://Camera2D.gd" type="Script" id=6]
 [ext_resource path="res://TilesManager.gd" type="Script" id=7]
-[ext_resource path="res://peaje.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://peaje.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6951, 359.251 )
@@ -130,7 +130,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="peaje2" parent="." instance=ExtResource( 7 )]
+[node name="peaje2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1332.82, 1223.44 )
 [connection signal="mouse_entered" from="Camera2D/AreaIzq" to="Camera2D" method="_on_AreaIzq_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/AreaIzq" to="Camera2D" method="_on_AreaIzq_mouse_exited"]
