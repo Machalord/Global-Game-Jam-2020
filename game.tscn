@@ -278,7 +278,6 @@ position = Vector2( -3.63156, -0.984131 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraControl/Areaup"]
 position = Vector2( -4.32611, 315.236 )
-
 shape = SubResource( 3 )
 
 [node name="Areadown" type="Area2D" parent="CameraControl"]
