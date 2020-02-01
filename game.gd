@@ -60,10 +60,11 @@ func OnClick(position):
 	pass
 
 enum TileTipe{
-	tierra = 1,
+	normal = 0,
+	bache = 1,
 	despintado = 2,
-	bache = 3,
-	normal = 4
+	pasto = 3,
+	tierra = 4
 }
 
 enum Herramienta{
