@@ -8,11 +8,11 @@ var modelo = 0
 func _ready():
 
 	if direction:
-			$Area2D/CollisionShape2D.add_to_group("adelanteauto")
-			$Area2D2/CollisionShape2D2.add_to_group("atrasauto")
+			$Area2D.add_to_group("adelanteauto")
+			$Area2D2.add_to_group("atrasauto")
 	else:
-			$Area2D/CollisionShape2D.add_to_group("atrasauto")
-			$Area2D2/CollisionShape2D2.add_to_group("adelanteauto")
+			$Area2D.add_to_group("atrasauto")
+			$Area2D2.add_to_group("adelanteauto")
 	frame_coords=Vector2(0,modelo)
 	pass # Replace with function body.
 
@@ -38,6 +38,18 @@ func _on_Area2D_area_entered(area):
 
 
 func _on_Area2D_area_exited(area):
+	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
+		andar=true
+	pass # Replace with function body.
+
+
+func _on_Area2D2_area_entered(area):
+	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
+		andar=false
+	pass # Replace with function body.
+
+
+func _on_Area2D2_area_exited(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
 		andar=true
 	pass # Replace with function body.

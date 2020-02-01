@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://spawnAutos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://game.gd" type="Script" id=3]
+[ext_resource path="res://cono.tscn" type="PackedScene" id=4]
 
 [node name="game" type="Node2D"]
 script = ExtResource( 3 )
@@ -17,6 +18,19 @@ tile_data = PoolIntArray( -720898, 3, 0, -720897, 3, 0, -786432, 3, 0, -786431, 
 [node name="spawnAutos" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1954.05, -441.364 )
 
+[node name="spawnAutos4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2020.71, -411.435 )
+
 [node name="spawnAutos2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 872.242, 374.627 )
+position = Vector2( -208.694, 897.725 )
 direccion = false
+
+[node name="spawnAutos3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -143.395, 929.014 )
+direccion = false
+
+[node name="cono" parent="." instance=ExtResource( 4 )]
+position = Vector2( 191.684, 441.102 )
+
+[node name="cono2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1041.92, 333.632 )
