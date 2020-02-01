@@ -30,7 +30,9 @@ tracks/0/keys = {
 position = Vector2( 1024.63, 64.9116 )
 texture = ExtResource( 3 )
 
-[node name="volcador" type="Sprite" parent="."]
+[node name="volcador" type="Sprite" parent="." groups=[
+"Ocupados",
+]]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 85.6195, -49.0965 )
 texture = ExtResource( 2 )

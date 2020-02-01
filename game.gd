@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 
 var aplanadoraInstance = load("res://aplanadora.tscn")
+var volcadorInstance = load("res://volcador.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,7 +37,13 @@ func OnClick(position):
 				apaux.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
 				apaux.get_child(0).SetPosicion(mapPos)
 				add_child(apaux)
-				#$TileMap.set_cellv(mapPos,tileMapSelect)
+		2:#SI ES UN TILE DESPINTADO
+			if not ocupado and menuSelection == 0 and coins > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
+				coins -=10
+				var apaux = volcadorInstance.instance()
+				apaux.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+				apaux.get_child(0).SetPosicion(mapPos)
+				add_child(apaux)
 	pass
 
 var tileMapSelect = 0
