@@ -7,6 +7,7 @@ extends Node2D
 
 var aplanadoraInstance = load("res://aplanadora.tscn")
 var volcadorInstance = load("res://volcador.tscn")
+var conoInstance = load("res://cono.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +15,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	if Input.is_action_just_pressed("MouseLeftClick"):
 		OnClick(get_global_mouse_position())
 	pass
@@ -30,20 +31,27 @@ func OnClick(position):
 			break
 	
 	match(id):
+		0:#ES UN TILE NORMAL
+			if not ocupado and menuSelection == 0 and coins > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
+				coins -=10
+				var spawn = conoInstance.instance()
+				spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+				spawn.SetPosicion(mapPos)
+				add_child(spawn)
 		1:#sSI ES UN TILE DE BACHE
 			if not ocupado and menuSelection == 0 and coins > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
 				coins -=10
-				var apaux = aplanadoraInstance.instance()
-				apaux.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-				apaux.get_child(0).SetPosicion(mapPos)
-				add_child(apaux)
+				var spawn = aplanadoraInstance.instance()
+				spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+				spawn.get_child(0).SetPosicion(mapPos)
+				add_child(spawn)
 		2:#SI ES UN TILE DESPINTADO
 			if not ocupado and menuSelection == 0 and coins > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
 				coins -=10
-				var apaux = volcadorInstance.instance()
-				apaux.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-				apaux.get_child(0).SetPosicion(mapPos)
-				add_child(apaux)
+				var spawn = volcadorInstance.instance()
+				spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+				spawn.get_child(0).SetPosicion(mapPos)
+				add_child(spawn)
 	pass
 
 var tileMapSelect = 0
