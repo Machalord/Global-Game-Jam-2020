@@ -9,7 +9,7 @@ var auto = preload("res://auto.tscn")
 func _process(delta):
 	randomize()
 	num = int(rand_range(200,1000))
-	if num==1000:
+	if num==100:
 		print("seeeeeeeeeeeeeeeeeeee")
 		var newauto=auto.instance()
 		newauto.direction = direccion
