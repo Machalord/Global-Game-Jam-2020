@@ -15,7 +15,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	if Input.is_action_just_pressed("MouseLeftClick"):
 		OnClick(get_global_mouse_position())
 	pass
@@ -36,7 +36,7 @@ func OnClick(position):
 				coins -=10
 				var spawn = conoInstance.instance()
 				spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-				spawn.get_child(0).SetPosicion(mapPos)
+				spawn.SetPosicion(mapPos)
 				add_child(spawn)
 		1:#sSI ES UN TILE DE BACHE
 			if not ocupado and menuSelection == 0 and coins > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
