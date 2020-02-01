@@ -9,7 +9,7 @@ var areader=false
 var areaup=false
 var areadown=false
 func _physics_process(delta):
-	
+		
 	if mouse_izq and !areaizq:
 		position.x-=15
 	if mouse_der and !areader:
