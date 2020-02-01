@@ -47,13 +47,15 @@ z_index = 2
 texture = ExtResource( 5 )
 
 [node name="tree4" type="Sprite" parent="."]
-position = Vector2( 506.095, 75.4922 )
+position = Vector2( 490.99, 93.1149 )
+scale = Vector2( 0.675156, 0.685308 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
 
 [node name="tree5" type="Sprite" parent="."]
-position = Vector2( 1081.92, 502.523 )
+position = Vector2( 1064.08, 519.063 )
+scale = Vector2( 0.616451, 0.704654 )
 z_index = 2
 texture = ExtResource( 5 )
 flip_h = true
