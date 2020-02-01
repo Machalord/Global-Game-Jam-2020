@@ -1,14 +1,18 @@
 extends Sprite
 
 
-export var direction = true
+var direction = true
 var andar = true
 var modelo
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
-	modelo=int(rand_range(0,5))
-	print(modelo)
+
+	if direction:
+			$Area2D/CollisionShape2D.add_to_group("adelanteauto")
+			$Area2D2/CollisionShape2D2.add_to_group("atrasauto")
+	else:
+			$Area2D/CollisionShape2D.add_to_group("atrasauto")
+			$Area2D2/CollisionShape2D2.add_to_group("adelanteauto")
 	frame_coords=Vector2(0,modelo)
 	pass # Replace with function body.
 
@@ -21,19 +25,19 @@ func _process(delta):
 			position.x -= 1.28 *5
 			position.y += 0.64 *5
 		else:
-			frame_coords.y=1
+			frame_coords.x=1
 			position.x += 1.28 *5
 			position.y -= 0.64 *5
 #	pass
 
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("cono"):
+	if area.is_in_group("cono") or area.is_in_group("auto"):
 		andar=false
 	pass # Replace with function body.
 
 
 func _on_Area2D_area_exited(area):
-	if area.is_in_group("cono"):
+	if area.is_in_group("cono") or area.is_in_group("auto"):
 		andar=true
 	pass # Replace with function body.
