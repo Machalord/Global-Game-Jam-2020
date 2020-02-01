@@ -25,7 +25,7 @@ func _process(delta):
 		if cataclismo >= 0:
 			cataclismo -= rand_range( 0, 10 ) * delta
 		elif tipoTile != TileTipe.bache and tipoTile != TileTipe.despintado:
-			if rand_range(0,1) == 0:
+			if rand_range(0,100) > 50:
 				tilemap.set_cellv(mapPosition,TileTipe.bache)
 			else:
 				tilemap.set_cellv(mapPosition,TileTipe.despintado)
