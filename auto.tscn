@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://auto.gd" type="Script" id=1]
 [ext_resource path="res://auto.png" type="Texture" id=2]
@@ -6,7 +6,10 @@
 [ext_resource path="res://explosion.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 39.7271
+radius = 25.7801
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 26.2119
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 26.3555
@@ -22,14 +25,14 @@ script = ExtResource( 1 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -67.2774, 35.4499 )
+position = Vector2( -56.08, 24.2525 )
 shape = SubResource( 1 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 63.1813, -45.0802 )
-shape = SubResource( 1 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 43.2626, -31.0473 )
+shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="." groups=[
 "borrar",

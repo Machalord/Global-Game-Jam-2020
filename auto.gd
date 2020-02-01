@@ -5,6 +5,7 @@ var direction = true
 var andar = true
 var modelo = 0
 var explotar = false
+var pago = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -40,10 +41,13 @@ func _process(delta):
 		
 	if amor > 12:
 		$caritas.frame = 0
+		pago = 5
 	if amor <=12 and amor > 4:
 		$caritas.frame = 1
-	if amor <=6:
+		pago=3
+	if amor <=4:
 		$caritas.frame = 2
+		pago = 1
 
 #	pass
 
@@ -51,11 +55,14 @@ func _process(delta):
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
 		andar=false
+	if area.is_in_group("peaje"):
+		andar=false
+		Global.money += pago
 	pass # Replace with function body.
 
 
 func _on_Area2D_area_exited(area):
-	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
+	if area.is_in_group("cono") or area.is_in_group("atrasauto") or area.is_in_group("peaje"):
 		andar=true
 	pass # Replace with function body.
 
