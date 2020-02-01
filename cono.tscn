@@ -7,7 +7,7 @@
 radius = 22.5929
 
 [node name="cono" type="Sprite" groups=[
-"Ocupados",
+"Conos",
 ]]
 position = Vector2( 232.663, 409.55 )
 texture = ExtResource( 1 )
