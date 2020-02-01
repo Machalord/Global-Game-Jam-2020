@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://cars/FBX 2013/Low_Poly_Vehicles_car01.fbx" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Low_Poly_Vehicles_car01" parent="." instance=ExtResource( 1 )]

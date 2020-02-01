@@ -22,8 +22,7 @@ texture = ExtResource( 1 )
 script = ExtResource( 4 )
 
 [node name="auto2" type="Sprite" parent="."]
-modulate = Color( 1, 0.537255, 0.537255, 1 )
-position = Vector2( 117.182, 801.817 )
+position = Vector2( 123.527, 792.435 )
 scale = Vector2( 0.443907, 0.443907 )
 texture = ExtResource( 1 )
 script = ExtResource( 4 )
