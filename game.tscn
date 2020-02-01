@@ -26,7 +26,7 @@ position = Vector2( -208.694, 897.725 )
 direccion = false
 
 [node name="spawnAutos3" parent="." instance=ExtResource( 1 )]
-position = Vector2( -143.395, 929.014 )
+position = Vector2( -145.912, 939.084 )
 direccion = false
 
 [node name="cono" parent="." instance=ExtResource( 4 )]
