@@ -1,8 +1,13 @@
 extends Sprite
 
-
 var mouseUp = false
 
+var mapaPos
+func SetPosicion(pos):
+	mapaPos = pos
+
+func GetMapaPos():
+	return mapaPos
 
 func _process(delta):
 	if Input.is_mouse_button_pressed(1) and mouseUp:
