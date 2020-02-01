@@ -141,8 +141,8 @@ __meta__ = {
 anchor_top = 0.719
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 691.761
-margin_bottom = 691.761
+margin_top = 555.0
+margin_bottom = 555.0
 mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -231,7 +231,7 @@ __meta__ = {
 }
 
 [node name="panel_buttons" type="Node2D" parent="."]
-position = Vector2( 0, 173.761 )
+position = Vector2( 0, 36 )
 z_index = 31
 
 [node name="Button" type="Button" parent="panel_buttons"]
@@ -358,14 +358,15 @@ __meta__ = {
 }
 
 [node name="buttons" type="Control" parent="."]
-margin_top = 173.761
+margin_top = 36.0
 margin_right = 40.0
-margin_bottom = 213.761
+margin_bottom = 76.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="buttons2" type="Node2D" parent="buttons"]
+position = Vector2( 246.927, 246.927 )
 
 [node name="buttons3" type="Node2D" parent="buttons"]
 
