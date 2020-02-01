@@ -53,3 +53,9 @@ func _on_Area2D2_area_exited(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto"):
 		andar=true
 	pass # Replace with function body.
+
+
+func _on_Area2D3_area_entered(area):
+	if area.is_in_group("borrar"):
+		queue_free()
+	pass # Replace with function body.
