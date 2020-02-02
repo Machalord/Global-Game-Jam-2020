@@ -5,6 +5,7 @@ var volcadorInstance = load("res://volcador.tscn")
 var conoInstance = load("res://cono.tscn")
 var pintadoraInstance =load("res://laQuePinta.tscn")
 var obreromartilloInstance=load("res://obrero martillo.tscn")
+var obrerocarretillaInstance=load("res://obrero caretilla.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,7 +44,15 @@ func OnClick(position):
 				add_child(spawn)
 		else:
 			match(id):
-				1:#sSI ES UN TILE DE BACHE
+				1:#SI ES UN TILE DE BACHE
+					if Global.herramienta == Herramienta.obreroCarretilla and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
+						Global.money -=10
+						Global.actionTimer = 0.2
+						var spawn = obrerocarretillaInstance.instance()
+						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+						spawn.get_child(0).SetPosicion(mapPos)
+						add_child(spawn)	
+						
 					if Global.herramienta == Herramienta.volcador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
 						Global.money -=50
 						Global.actionTimer = 0.2
@@ -82,4 +91,5 @@ enum Herramienta{
 	pintadora = 3,
 	cono = 4,
 	volcador = 5
+	obreroCarretilla=6
 }
