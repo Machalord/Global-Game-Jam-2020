@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://spawnAutos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://peaje.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenas/Hud.tscn" type="PackedScene" id=10]
 [ext_resource path="res://peaje2.png" type="Texture" id=11]
+[ext_resource path="res://cartel3.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6951, 359.251 )
@@ -46,7 +47,6 @@ extents = Vector2( 272.088, 1388.22 )
 script = ExtResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="."]
-pause_mode = 1
 mode = 1
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 256, 128 )
@@ -55,7 +55,6 @@ tile_data = PoolIntArray( -1179649, 3, 0, -1245184, 3, 0, -1245183, 3, 0, -12451
 script = ExtResource( 7 )
 
 [node name="peaje3" parent="." instance=ExtResource( 9 )]
-pause_mode = 1
 position = Vector2( 1728.35, -121.256 )
 texture = ExtResource( 11 )
 
@@ -63,7 +62,6 @@ texture = ExtResource( 11 )
 position = Vector2( 40.1737, 25.2024 )
 
 [node name="peaje4" parent="." instance=ExtResource( 9 )]
-pause_mode = 1
 position = Vector2( 1676.04, -29.2393 )
 z_index = 1
 texture = ExtResource( 11 )
@@ -72,7 +70,6 @@ texture = ExtResource( 11 )
 position = Vector2( 40.1737, 25.2024 )
 
 [node name="peaje" parent="." instance=ExtResource( 9 )]
-pause_mode = 1
 
 [node name="spawnAutos" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2586.98, -753.534 )
@@ -301,7 +298,6 @@ position = Vector2( -640, -360 )
 z_index = 20
 
 [node name="peaje2" parent="." instance=ExtResource( 9 )]
-pause_mode = 1
 position = Vector2( -1332.82, 1223.44 )
 
 [node name="limiteizq" type="Area2D" parent="." groups=[
@@ -355,6 +351,12 @@ position = Vector2( 3282.41, -893.989 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource( 10 )
+
+[node name="cartel3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 256.754, 696.658 )
+
+[node name="cartel4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 79.9053, 526.611 )
 [connection signal="area_entered" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_area_entered"]
 [connection signal="area_exited" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_area_exited"]
 [connection signal="mouse_entered" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_mouse_entered"]
