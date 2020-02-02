@@ -94,7 +94,8 @@ enum TileTipe{
 	bache = 1,
 	despintado = 2,
 	pasto = 3,
-	tierra = 4
+	tierra = 4,
+	volcado = 5
 }
 
 enum Herramienta{
@@ -104,7 +105,9 @@ enum Herramienta{
 	cono = 4,
 	volcador = 5
 	obreroCarretilla=6
-	obreroBaila=7
+	obreroBaila=7,
+	bloqueo = 8,
+	desvio = 9
 }
 
 

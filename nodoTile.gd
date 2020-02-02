@@ -47,5 +47,6 @@ enum TileTipe{
 	bache = 1,
 	despintado = 2,
 	pasto = 3,
-	tierra = 4
+	tierra = 4,
+	volcado = 5
 }
