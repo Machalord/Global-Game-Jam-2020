@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/hud_money.png" type="Texture" id=1]
 [ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://panelopciones.png" type="Texture" id=20]
 [ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=21]
 [ext_resource path="res://escenas/optionsmenu.gd" type="Script" id=22]
+[ext_resource path="res://cartel3.png" type="Texture" id=23]
+[ext_resource path="res://cartel.png" type="Texture" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -153,12 +155,44 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 39.7062
-margin_top = 41.2929
+margin_top = 41.0
 margin_right = 173.706
-margin_bottom = 103.293
+margin_bottom = 103.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "$100000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="day_label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 183.47
+margin_top = 41.0
+margin_right = 317.47
+margin_bottom = 103.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Day 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="time_label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 308.378
+margin_top = 41.0
+margin_right = 442.378
+margin_bottom = 103.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "20:00"
 align = 1
 valign = 1
 __meta__ = {
@@ -446,7 +480,7 @@ margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
 price = 50
-tool_id = 1
+tool_id = 7
 texture = ExtResource( 19 )
 
 [node name="icon" parent="buttons/buttons3/button6" index="0"]
@@ -519,12 +553,12 @@ margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
 price = 5
-tool_id = 4
+tool_id = 8
 texture = ExtResource( 12 )
 
 [node name="icon" parent="buttons/buttons1/button2" index="0"]
-scale = Vector2( 1, 1 )
-texture = ExtResource( 17 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 23 )
 
 [node name="button3" parent="buttons/buttons1" instance=ExtResource( 11 )]
 margin_left = 286.0
@@ -532,12 +566,12 @@ margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
 price = 20
-tool_id = 4
+tool_id = 9
 texture = ExtResource( 13 )
 
 [node name="icon" parent="buttons/buttons1/button3" index="0"]
-scale = Vector2( 1, 1 )
-texture = ExtResource( 17 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
 
 [node name="button4" parent="buttons/buttons1" instance=ExtResource( 11 )]
 visible = false
