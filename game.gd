@@ -6,6 +6,9 @@ var conoInstance = load("res://cono.tscn")
 var pintadoraInstance =load("res://laQuePinta.tscn")
 var obreromartilloInstance=load("res://obrero martillo.tscn")
 var obrerocarretillaInstance=load("res://obrero caretilla.tscn")
+var obreroquebailaInstance=load("res://obrero baila.tscn")
+var desvioInstance=load("res://carteldesvio.tscn")
+var barricadaInstance=load("res://cartel3.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -65,7 +68,6 @@ func OnClick(position):
 					spawn.get_child(0).SetPosicion(mapPos)
 					add_child(spawn)
 			Herramienta.volcador:
-				
 				
 		else:
 			match(id):
