@@ -126,6 +126,8 @@ func OnClick(position):
 					spawn.get_child(0).SetPosicion(mapPos)
 					add_child(spawn)
 		Global.herramienta = 0
+		for b in get_tree().get_nodes_in_group("toolbutton"):
+			b.pressed=false
 	pass
 
 enum TileTipe{

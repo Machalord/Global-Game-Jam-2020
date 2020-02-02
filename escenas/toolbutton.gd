@@ -8,6 +8,7 @@ extends TextureButton
 export (int) var price=0
 export (int) var tool_id=0
 export (Texture) var texture
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$label_price.text="$"+str(price)
@@ -20,6 +21,9 @@ func _ready():
 
 
 func _on_button_pressed():
+	for b in get_tree().get_nodes_in_group("toolbutton"):
+		if b!=self:
+			b.pressed=false
 	$sound.play()
 	Global.herramienta=tool_id
 	pass # Replace with function body.
