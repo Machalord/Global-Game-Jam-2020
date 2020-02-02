@@ -147,6 +147,10 @@ func _on_Area2D_area_exited(area):
 
 	if area.is_in_group("baila"):
 		subirAmor=false
+	
+	if area.is_in_group("maquina"):
+		explotar=true
+		area.get_parent().get_parent().queue_free()
 	pass # Replace with function body.
 
 
