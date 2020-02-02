@@ -134,6 +134,7 @@ func _on_Area2D_area_entered(area):
 		andar=false
 		if !pagado:
 			Global.money += pago
+			Global.cantAutos +=1
 			pagado=true
 			instance_dolar()
 	if area.is_in_group("baila"):
@@ -147,6 +148,10 @@ func _on_Area2D_area_exited(area):
 
 	if area.is_in_group("baila"):
 		subirAmor=false
+	
+	if area.is_in_group("maquina"):
+		explotar=true
+		area.get_parent().get_parent().queue_free()
 	pass # Replace with function body.
 
 
