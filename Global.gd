@@ -5,7 +5,8 @@ var money = 500
 var herramienta = 0
 var actionTimer = -1
 var dia = 1
-var cantAutos =0
+var cantAutos =1
+var amor=0
 var money_aux=0
 var newday = true
 func _ready():
@@ -17,6 +18,7 @@ func _process(delta):
 		newday=false
 		money_aux=0
 		cantAutos=0
+		amor=0
 	if actionTimer >= 0:
 		actionTimer -= delta
 	pass

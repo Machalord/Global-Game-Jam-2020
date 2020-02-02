@@ -16,7 +16,8 @@ func _ready():
 func _process(delta):
 	if visible:
 		$Label2.text="Remaining Money = $"+str(Global.money)
-		$Label3.text="Earnings of the day = "+str(Global.money_aux)
+		$Label3.text="Love = "+str(int(Global.amor / Global.cantAutos-1))+"%"
+	
 #	pass
 
 
