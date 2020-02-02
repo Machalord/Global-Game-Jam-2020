@@ -34,36 +34,44 @@ func OnClick(position):
 			ocupado = true
 			break
 	
-	if not ocupado:
-		if Global.herramienta == Herramienta.cono and Global.money > 1 and Global.actionTimer < 0:
-			var hayCono = false;
-			for n in get_tree().get_nodes_in_group("Conos"):
-				if n.isMouseOver() :
-					hayCono = true
-					break
-			if(!hayCono):
-				Global.money -=1
-				Global.actionTimer = 0.2
-				var spawn = conoInstance.instance()
-				spawn.position = position
-				add_child(spawn)
+	if not ocupado and Global.herramienta != 0 and Global.actionTimer < 0:
+		match(Global.herramienta):
+			Herramienta.cono:
+				if Global.money > 1:
+					var hayCono = false;
+					for n in get_tree().get_nodes_in_group("Conos"):
+						if n.isMouseOver() :
+							hayCono = true
+							break
+					if(!hayCono):
+						Global.money -=1
+						Global.actionTimer = 0.2
+						var spawn = conoInstance.instance()
+						spawn.position = position
+						add_child(spawn)
+			Herramienta.obreroBaila:
+				if Global.money > 50:
+					Global.money -= 50
+					Global.actionTimer = 0.2
+					var spawn = conoInstance.instance()
+					spawn.position = position
+					add_child(spawn)
+			Herramienta.obreroCarretilla:
+				if Global.money > 10:
+					Global.money -=10
+					Global.actionTimer = 0.2
+					var spawn = obrerocarretillaInstance.instance()
+					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+					spawn.get_child(0).SetPosicion(mapPos)
+					add_child(spawn)
+			Herramienta.volcador:
 				
-		if Global.herramienta == Herramienta.obreroBaila and Global.money > 50 and Global.actionTimer < 0:
-				Global.money -=50
-				Global.actionTimer = 0.2
-				var spawn = conoInstance.instance()
-				spawn.position = position
-				add_child(spawn)		
+				
 		else:
 			match(id):
 				1:#SI ES UN TILE DE BACHE
 					if Global.herramienta == Herramienta.obreroCarretilla and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						Global.money -=10
-						Global.actionTimer = 0.2
-						var spawn = obrerocarretillaInstance.instance()
-						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-						spawn.get_child(0).SetPosicion(mapPos)
-						add_child(spawn)	
+						
 						
 					if Global.herramienta == Herramienta.volcador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
 						Global.money -=50
