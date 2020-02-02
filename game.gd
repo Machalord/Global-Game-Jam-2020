@@ -12,7 +12,7 @@ var barricadaInstance=load("res://cartel3.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.money = 500
+
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -154,5 +154,6 @@ enum Herramienta{
 
 
 func _on_Timer_timeout():
-
+	$CameraControl/Hud/win_resume.visible=true
+	get_tree().paused=true
 	pass # Replace with function body.
