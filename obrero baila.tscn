@@ -61,6 +61,7 @@ rotation = -0.471239
 position = Vector2( 22.3769, 22.9181 )
 shape = SubResource( 3 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+volume_db = -6.058
 autoplay = true
