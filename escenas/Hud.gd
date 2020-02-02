@@ -12,6 +12,7 @@ func _ready():
 
 func _process(delta):
 	$money_label.text="$"+str(Global.money)
+	AudioServer.set_bus_volume_db(0,$optionsmenu/volumeslider.value)
 
 #	if get_global_mouse_position().y>position.y+700 and !show:
 #		$AnimationPlayer.play("show")
