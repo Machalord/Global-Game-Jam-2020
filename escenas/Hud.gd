@@ -18,11 +18,15 @@ func _process(delta):
 #	if get_global_mouse_position().y<position.y+550 and show:
 #		$AnimationPlayer.play("hide")
 #		show=false	
+	print($optionsmenu/volumeslider.value)
 	if Input.is_action_just_pressed("pausa"):
 		get_tree().paused =!get_tree().paused
 	if Input.is_action_just_pressed("options"):	
 		$optionsmenu.visible=!$optionsmenu.visible
 		get_tree().paused =!get_tree().paused
+	if Input.is_action_just_pressed("explotar"):
+		for i in get_tree().get_nodes_in_group("auto"):
+			i.explotar=true		
 	pass
 
 func _on_Button_pressed(current_panel):
