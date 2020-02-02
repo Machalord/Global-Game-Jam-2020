@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://auto.gd" type="Script" id=1]
 [ext_resource path="res://auto.png" type="Texture" id=2]
@@ -13,6 +13,18 @@ radius = 26.2119
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 26.3555
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 159.843, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 147.365, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 150.113, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 149.834, 10 )
 
 [node name="auto" type="Sprite"]
 scale = Vector2( 0.443907, 0.443907 )
@@ -52,6 +64,45 @@ hframes = 3
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="areafreno" type="Area2D" parent="." groups=[
+"cono",
+]]
+rotation = -0.523598
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areafreno"]
+position = Vector2( -57.8942, 53.1774 )
+shape = SubResource( 4 )
+
+[node name="areafreno2" type="Area2D" parent="." groups=[
+"cono",
+]]
+position = Vector2( -94.1653, -17.3098 )
+rotation = -0.523598
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areafreno2"]
+position = Vector2( -10.0471, 2.43279 )
+shape = SubResource( 5 )
+
+[node name="areafreno3" type="Area2D" parent="." groups=[
+"cono",
+]]
+position = Vector2( 22.2176, 24.2525 )
+rotation = -0.523598
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areafreno3"]
+position = Vector2( 106.613, 33.5486 )
+shape = SubResource( 6 )
+
+[node name="areafreno4" type="Area2D" parent="." groups=[
+"cono",
+]]
+position = Vector2( 42.7536, -100.397 )
+rotation = -0.523598
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areafreno4"]
+position = Vector2( -13.7298, 4.86523 )
+shape = SubResource( 7 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="Area2D2" to="." method="_on_Area2D2_area_entered"]
