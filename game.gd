@@ -17,6 +17,7 @@ func _process(delta):
 	print(get_tree().get_nodes_in_group("auto").size())
 	if Input.is_action_just_pressed("MouseLeftClick"):
 		OnClick(get_global_mouse_position())
+	
 	pass
 
 func OnClick(position):

@@ -25,6 +25,6 @@ func _process(delta):
 	if desvanecer:
 		alpha -= 0.02
 		modulate.a = alpha
-			
+	
 
 #	pass
