@@ -16,3 +16,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	
+	Global.dia+=1
+	get_tree().change_scene("res://game.tscn")
+	pass # Replace with function body.

@@ -80,3 +80,4 @@ margin_right = 762.0
 margin_bottom = 487.984
 custom_fonts/font = SubResource( 2 )
 text = "Go to Next Day"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
