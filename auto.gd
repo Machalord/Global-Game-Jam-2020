@@ -40,8 +40,8 @@ func _process(delta):
 	if subirAmor && amor < 100:
 		amor += 20 * delta
 	if andar:
-		if tileMap.EstaMalHecho(position) && amor > 0:
-			amor -= 10 * delta
+		if tileMap.EstaMalHecho(global_position) && amor > 0:
+			amor -= 20 * delta
 		if !direction:
 			if findesvio:
 				if valordesvioder >0:
