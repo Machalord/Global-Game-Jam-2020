@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://spawnAutos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
@@ -11,8 +11,6 @@
 [ext_resource path="res://peaje.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenas/Hud.tscn" type="PackedScene" id=10]
 [ext_resource path="res://peaje2.png" type="Texture" id=11]
-[ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://datos.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6951, 359.251 )
@@ -25,12 +23,6 @@ extents = Vector2( 649.449, 41.182 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 633.626, 47.3554 )
-
-[sub_resource type="DynamicFont" id=11]
-size = 30
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 12 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 100.468, 1257.16 )
@@ -297,48 +289,27 @@ current = true
 editor_draw_screen = false
 editor_draw_limits = true
 
-[node name="datos" type="Sprite" parent="CameraControl"]
-position = Vector2( -347.367, -296.932 )
-scale = Vector2( 0.736984, 0.736984 )
-z_index = 5
-texture = ExtResource( 13 )
-
-[node name="Label" type="Label" parent="CameraControl/datos"]
-margin_left = 203.587
-margin_top = -1.54147
-margin_right = 273.587
-margin_bottom = 35.4585
-custom_fonts/font = SubResource( 11 )
-text = "8:00"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="CameraControl/datos"]
-margin_left = 3.4559
-margin_top = -1.54147
-margin_right = 73.4559
-margin_bottom = 35.4585
-custom_fonts/font = SubResource( 11 )
-text = "8:00"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Hud" parent="CameraControl" instance=ExtResource( 10 )]
 position = Vector2( -640, -360 )
 z_index = 20
 
-[node name="money" parent="CameraControl/Hud" index="0"]
-visible = false
+[node name="datos" parent="CameraControl/Hud" index="0"]
+position = Vector2( 263.76, 61.4878 )
 
 [node name="money_label" parent="CameraControl/Hud" index="1"]
-margin_left = 68.3457
+margin_left = 54.0259
 margin_top = 44.1569
-margin_right = 202.345
+margin_right = 188.026
 margin_bottom = 106.157
+
+[node name="day_label" parent="CameraControl/Hud" index="2"]
+margin_left = 219.506
+margin_right = 353.506
+text = "3"
+
+[node name="time_label" parent="CameraControl/Hud" index="3"]
+margin_left = 362.061
+margin_right = 496.061
 
 [node name="peaje2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1332.82, 1223.44 )

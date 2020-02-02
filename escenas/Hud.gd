@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta):
 	$money_label.text="$"+str(Global.money)
-	$day_label.text="Day "+str(Global.dia)
+
 #	if get_global_mouse_position().y>position.y+700 and !show:
 #		$AnimationPlayer.play("show")
 #		show=true
