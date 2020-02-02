@@ -5,6 +5,7 @@ var money
 var herramienta = 0
 var actionTimer = -1
 var dia = 1
+var cantAutos = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
