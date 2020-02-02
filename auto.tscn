@@ -26,9 +26,7 @@ extents = Vector2( 150.113, 10 )
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 149.834, 10 )
 
-[node name="auto" type="Sprite" groups=[
-"auto",
-]]
+[node name="auto" type="Sprite"]
 scale = Vector2( 0.443907, 0.443907 )
 texture = ExtResource( 2 )
 vframes = 6
