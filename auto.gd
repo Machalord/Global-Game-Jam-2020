@@ -15,7 +15,7 @@ var valordesvioder=0
 var valordesvioizq=0
 var findesvio = false
 var findesvio2 = false
-
+var bocinafin=true
 var tileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -98,8 +98,12 @@ func _process(delta):
 			position.x += 1.28 *5
 			position.y -= 0.64 *5
 	else:
+		
 		if $Timer.is_stopped():
 			$Timer.start()
+			if bocinafin:
+				$bocina.play()
+				bocinafin=false
 	if explotar:
 		andar=false
 		$explosion/explosion/AnimationPlayer.play("explosion")
@@ -155,6 +159,7 @@ func _on_Area2D2_area_entered(area):
 		andar=false
 		if !pagado:
 			Global.money += pago
+			
 			pagado=true
 			instance_dolar()
 	if area.is_in_group("baila"):
@@ -194,4 +199,9 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 func _on_Timer_timeout():
 	$Timer.start()
 	amor-=5
+	pass # Replace with function body.
+
+
+func _on_bocina_finished():
+	bocinafin=true
 	pass # Replace with function body.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bocina.ogg-2a572a840f7211b28a2daf2e799cf6a8.oggstr"
+
+[deps]
+
+source_file="res://sound/bocina.ogg"
+dest_files=[ "res://.import/bocina.ogg-2a572a840f7211b28a2daf2e799cf6a8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

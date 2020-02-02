@@ -32,7 +32,7 @@ func _process(delta):
 
 func _on_Button_pressed(current_panel):
 	var panels =$panels.get_children()
-
+	$click.play()
 	for i in range($panels.get_children().size()):
 		panels[i-1].z_index=20
 		get_node("buttons/buttons"+str(i+1)).visible=false
@@ -63,16 +63,19 @@ func _on_Button_pressed(current_panel):
 func _on_back_pressed():
 	$optionsmenu.visible=false
 	get_tree().paused =false
+	$click.play()
 	pass # Replace with function body.
 
 
 func _on_showoptions_pressed():
 	$optionsmenu.visible=true
 	get_tree().paused =true
+	$click.play()
 	pass # Replace with function body.
 
 
 func _on_mainmenu_pressed():
 	get_tree().change_scene("res://escenas/Menu.tscn")
 	get_tree().paused =false
+	$click.play()
 	pass # Replace with function body.

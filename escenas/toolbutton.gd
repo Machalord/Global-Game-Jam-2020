@@ -20,5 +20,6 @@ func _ready():
 
 
 func _on_button_pressed():
+	get_node("../../../click2").play()
 	Global.herramienta=tool_id
 	pass # Replace with function body.

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://obrero baila.gd" type="Script" id=1]
 [ext_resource path="res://obrero baila.png" type="Texture" id=2]
 [ext_resource path="res://vacio.png" type="Texture" id=3]
+[ext_resource path="res://sound/obrerobaila.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "obreromartillo"
@@ -59,3 +60,7 @@ rotation = -0.471239
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 22.3769, 22.9181 )
 shape = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

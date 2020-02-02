@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://dolar.gd" type="Script" id=1]
 [ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sound/cobrar.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -25,3 +26,9 @@ __meta__ = {
 position = Vector2( 0, -34.3423 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="dolar" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 40.4361, 19.339 )
+stream = ExtResource( 3 )
+volume_db = -4.874
+autoplay = true

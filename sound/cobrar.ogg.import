@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cobrar.ogg-53bb3dd51bed6f0959443acd868cf508.oggstr"
+
+[deps]
+
+source_file="res://sound/cobrar.ogg"
+dest_files=[ "res://.import/cobrar.ogg-53bb3dd51bed6f0959443acd868cf508.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
