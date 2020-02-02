@@ -8,6 +8,7 @@ var explotar = false
 var pago = 0
 var dolar=preload("res://dolar.tscn")
 var pagado = false
+var subirAmor = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -23,6 +24,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if subirAmor:
+		amor=15
 	if andar:
 		$Timer.stop()
 		if direction:
@@ -71,13 +74,15 @@ func _on_Area2D_area_entered(area):
 			pagado=true
 			instance_dolar()
 	if area.is_in_group("baila"):
-		amor=15
+		subirAmor=true
 	pass # Replace with function body.
 
 
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto") or area.is_in_group("peaje"):
 		andar=true
+	if area.is_in_group("baila"):
+		subirAmor=false
 	pass # Replace with function body.
 
 

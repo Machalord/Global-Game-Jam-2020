@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://spawnAutos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://peaje.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenas/Hud.tscn" type="PackedScene" id=10]
 [ext_resource path="res://peaje2.png" type="Texture" id=11]
+[ext_resource path="res://obrero baila.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6951, 359.251 )
@@ -350,6 +351,9 @@ position = Vector2( 3282.41, -893.989 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource( 10 )
+
+[node name="obrero baila" parent="." instance=ExtResource( 12 )]
+position = Vector2( 297.076, 625.326 )
 [connection signal="area_entered" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_area_entered"]
 [connection signal="area_exited" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_area_exited"]
 [connection signal="mouse_entered" from="CameraControl/AreaIzq" to="CameraControl" method="_on_AreaIzq_mouse_entered"]
