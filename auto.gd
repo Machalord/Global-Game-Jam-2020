@@ -1,6 +1,6 @@
 extends Sprite
 
-var amor = 15
+var amor = 110
 var direction = true
 var andar = true
 var modelo = 0
@@ -15,9 +15,11 @@ var valordesvioder=0
 var valordesvioizq=0
 var findesvio = false
 var findesvio2 = false
+
+var tileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
+	tileMap = get_node("/root/game/TileMap")
 	if direction:
 			$Area2D.add_to_group("adelanteauto")
 			$Area2D2.add_to_group("atrasauto")
@@ -29,16 +31,17 @@ func _ready():
 			$areafreno3.queue_free()
 			$areafreno4.queue_free()
 	frame_coords=Vector2(0,modelo)
+	amor=110
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-			
 	if subirAmor:
-		amor=15
+		amor += 50
 	if andar:
+		if tileMap.EstaMalHecho(position):
+			amor -= 10 * delta
 		if !direction:
 			if findesvio:
 				if valordesvioder >0:
@@ -99,17 +102,15 @@ func _process(delta):
 			$Timer.start()
 	if explotar:
 		andar=false
-
 		$explosion/explosion/AnimationPlayer.play("explosion")
 		
-	if amor > 12:
+	if amor > 80:
 		$caritas.frame = 0
 		pago = 5
-		
-	if amor <=12 and amor > 4:
+	elif amor > 40:
 		$caritas.frame = 1
 		pago=3
-	if amor <=4:
+	else:
 		$caritas.frame = 2
 		pago = 1
 
@@ -192,5 +193,5 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func _on_Timer_timeout():
 	$Timer.start()
-	amor-=1
+	amor-=5
 	pass # Replace with function body.
