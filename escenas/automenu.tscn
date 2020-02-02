@@ -1,18 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://explosion.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/automenu.gd" type="Script" id=2]
 [ext_resource path="res://auto.png" type="Texture" id=3]
 [ext_resource path="res://caritas.png" type="Texture" id=4]
-
-[sub_resource type="CircleShape2D" id=1]
-radius = 25.7801
-
-[sub_resource type="CircleShape2D" id=2]
-radius = 26.2119
-
-[sub_resource type="CircleShape2D" id=3]
-radius = 26.3555
 
 [node name="auto" type="Sprite"]
 scale = Vector2( 0.443907, 0.443907 )
@@ -22,26 +12,6 @@ hframes = 2
 frame = 11
 script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -56.08, 24.2525 )
-shape = SubResource( 1 )
-
-[node name="Area2D2" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 42.7536, -31.0473 )
-shape = SubResource( 2 )
-
-[node name="Area2D3" type="Area2D" parent="." groups=[
-"borrar",
-]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( -9.1615, -10.1794 )
-shape = SubResource( 3 )
-
 [node name="caritas" type="Sprite" parent="."]
 visible = false
 position = Vector2( -9.1615, -76.1409 )
@@ -49,16 +19,6 @@ scale = Vector2( 0.627582, 0.627582 )
 texture = ExtResource( 4 )
 hframes = 3
 
-[node name="explosion" parent="." instance=ExtResource( 1 )]
-
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="Area2D2" to="." method="_on_Area2D2_area_entered"]
-[connection signal="area_exited" from="Area2D2" to="." method="_on_Area2D2_area_exited"]
-[connection signal="area_entered" from="Area2D3" to="." method="_on_Area2D3_area_entered"]
-[connection signal="animation_finished" from="explosion/explosion/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-
-[editable path="explosion"]
