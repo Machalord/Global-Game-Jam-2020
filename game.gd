@@ -39,7 +39,7 @@ func OnClick(position):
 	
 	if not ocupado and Global.herramienta != 0 and Global.actionTimer < 0:
 		match(Global.herramienta):
-			Herramienta.cono:
+			Herramienta.cono:# CONO = 4
 				if Global.money > 1:
 					var hayCono = false;
 					for n in get_tree().get_nodes_in_group("Conos"):
@@ -52,51 +52,80 @@ func OnClick(position):
 						var spawn = conoInstance.instance()
 						spawn.position = position
 						add_child(spawn)
-			Herramienta.obreroBaila:
+			Herramienta.desvio:# DESVIO = 9
+				if Global.money > 1:
+					var hayCono = false;
+					for n in get_tree().get_nodes_in_group("Conos"):
+						if n.isMouseOver() :
+							hayCono = true
+							break
+					if(!hayCono):
+						Global.money -= 1
+						Global.actionTimer = 0.2
+						var spawn = desvioInstance.instance()
+						spawn.position = position
+						add_child(spawn)
+			Herramienta.bloqueo:# bloqueo = 8
+				if Global.money > 1:
+					var hayCono = false;
+					for n in get_tree().get_nodes_in_group("Conos"):
+						if n.isMouseOver() :
+							hayCono = true
+							break
+					if(!hayCono):
+						Global.money -= 1
+						Global.actionTimer = 0.2
+						var spawn = barricadaInstance.instance()
+						spawn.position = position
+						add_child(spawn)
+			Herramienta.obreroBaila: # BAILA = 7
 				if Global.money > 50:
 					Global.money -= 50
 					Global.actionTimer = 0.2
-					var spawn = conoInstance.instance()
+					var spawn = obreroquebailaInstance.instance()
 					spawn.position = position
 					add_child(spawn)
-			Herramienta.obreroCarretilla:
-				if Global.money > 10:
+			Herramienta.obreroCarretilla: # CARRETILLA = 6
+				if Global.money > 10 && (id == TileTipe.normal || id == TileTipe.bache):
 					Global.money -=10
 					Global.actionTimer = 0.2
 					var spawn = obrerocarretillaInstance.instance()
 					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
 					spawn.get_child(0).SetPosicion(mapPos)
 					add_child(spawn)
-			Herramienta.volcador:
-				
-		else:
-			match(id):
-				1:#SI ES UN TILE DE BACHE
-					if Global.herramienta == Herramienta.obreroCarretilla and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						
-						
-					if Global.herramienta == Herramienta.volcador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						Global.money -=50
-						Global.actionTimer = 0.2
-						var spawn = volcadorInstance.instance()
-						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-						spawn.get_child(0).SetPosicion(mapPos)
-						add_child(spawn)
-					if Global.herramienta == Herramienta.obreroAplanador and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						Global.money -=10
-						Global.actionTimer = 0.2
-						var spawn = obreromartilloInstance.instance()
-						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-						spawn.get_child(0).SetPosicion(mapPos)
-						add_child(spawn)	
-				2:#SI ES UN TILE DESPINTADO
-					if Global.herramienta == Herramienta.pintadora and Global.money > 10:#SI EN EL MENU SELECCIONAMOS LA REPARACION DE BACHES
-						Global.money -=50
-						Global.actionTimer = 0.2
-						var spawn = pintadoraInstance.instance()
-						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
-						spawn.get_child(0).SetPosicion(mapPos)
-						add_child(spawn)
+			Herramienta.volcador: # VOLCADOR = 5
+				if Global.money > 50 && (id == TileTipe.normal || id == TileTipe.bache):
+					Global.money -=50
+					Global.actionTimer = 0.2
+					var spawn = volcadorInstance.instance()
+					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+					spawn.get_child(0).SetPosicion(mapPos)
+					add_child(spawn)
+			Herramienta.obreroAplanador: # OBRERO APLANA = 1
+				if Global.money > 10 && id == TileTipe.volcado:
+					Global.money -=10
+					Global.actionTimer = 0.2
+					var spawn = obreromartilloInstance.instance()
+					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+					spawn.get_child(0).SetPosicion(mapPos)
+					add_child(spawn)
+			Herramienta.aplanadoraRapida: # MAQUINA APLANA = 2
+				if Global.money > 50 && id == TileTipe.volcado:
+					Global.money -= 50
+					Global.actionTimer = 0.2
+					var spawn = aplanadoraInstance.instance()
+					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+					spawn.get_child(0).SetPosicion(mapPos)
+					add_child(spawn)
+			Herramienta.pintadora: # PINTADORA = 3
+				if Global.money > 50 && (id == TileTipe.despintado || id == TileTipe.normal):
+					Global.money -= 50
+					Global.actionTimer = 0.2
+					var spawn = pintadoraInstance.instance()
+					spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
+					spawn.get_child(0).SetPosicion(mapPos)
+					add_child(spawn)
+		Global.herramienta = 0
 	pass
 
 enum TileTipe{
@@ -105,7 +134,8 @@ enum TileTipe{
 	despintado = 2,
 	pasto = 3,
 	tierra = 4,
-	volcado = 5
+	volcado = 5,
+	especial = 6
 }
 
 enum Herramienta{
