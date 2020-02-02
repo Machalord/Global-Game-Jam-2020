@@ -32,7 +32,7 @@ func SetTipoTile(tipo):
 
 func _process(delta):
 	var tipoTile = tilemap.get_cellv(mapPosition)
-	if tipoTile != TileTipe.pasto:
+	if tipoTile != TileTipe.pasto && tipoTile != TileTipe.especial:
 		if cataclismo >= 0:
 			cataclismo -= rand_range( 0, 10 ) * delta
 		elif tipoTile != TileTipe.bache and tipoTile != TileTipe.despintado:
@@ -48,5 +48,6 @@ enum TileTipe{
 	despintado = 2,
 	pasto = 3,
 	tierra = 4,
-	volcado = 5
+	volcado = 5,
+	especial = 6
 }
