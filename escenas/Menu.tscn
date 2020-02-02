@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://gamemenu.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://trees.tscn" type="PackedScene" id=5]
 [ext_resource path="res://escenas/spawnAutosmenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://escenas/Hud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://logoggj.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.6951, 359.251 )
@@ -37,6 +39,11 @@ extents = Vector2( 171.648, 1708.45 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 272.088, 1388.22 )
+
+[sub_resource type="DynamicFont" id=11]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
 
 [node name="Menu" type="Node2D"]
 
@@ -167,6 +174,26 @@ margin_left = -736.0
 margin_top = 382.0
 margin_right = -736.0
 margin_bottom = 382.0
+
+[node name="logoggj" type="Sprite" parent="."]
+position = Vector2( 360.566, 902.277 )
+scale = Vector2( 0.2673, 0.2673 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 292.748
+margin_top = 960.905
+margin_right = 422.748
+margin_bottom = 1026.9
+custom_fonts/font = SubResource( 11 )
+text = "Matias Segura
+Matias Machado
+Emilio Eigler"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="area_entered" from="game/CameraControl/AreaIzq" to="game/CameraControl" method="_on_AreaIzq_area_entered"]
 [connection signal="area_exited" from="game/CameraControl/AreaIzq" to="game/CameraControl" method="_on_AreaIzq_area_exited"]
 [connection signal="mouse_entered" from="game/CameraControl/AreaIzq" to="game/CameraControl" method="_on_AreaIzq_mouse_entered"]
