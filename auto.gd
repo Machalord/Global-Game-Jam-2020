@@ -37,8 +37,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if subirAmor:
-		amor += 50
+	if subirAmor && amor < 100:
+		amor += 20 * delta
 	if andar:
 		if tileMap.EstaMalHecho(position):
 			amor -= 10 * delta
@@ -138,17 +138,12 @@ func _on_Area2D_area_entered(area):
 			print(Global.cantAutos)
 			pagado=true
 			instance_dolar()
-	if area.is_in_group("baila"):
-		subirAmor=true
 	pass # Replace with function body.
 
 
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto") or area.is_in_group("peaje"):
 		andar=true
-
-	if area.is_in_group("baila"):
-		subirAmor=false
 	
 	if area.is_in_group("maquina"):
 		explotar=true
@@ -192,6 +187,8 @@ func _on_Area2D2_area_exited(area):
 
 
 func _on_Area2D3_area_entered(area):
+	if area.is_in_group("baila"):
+		subirAmor=true
 	if area.is_in_group("borrar"):
 		queue_free()
 	pass # Replace with function body.
@@ -210,4 +207,10 @@ func _on_Timer_timeout():
 
 func _on_bocina_finished():
 	bocinafin=true
+	pass # Replace with function body.
+
+
+func _on_Area2D3_area_exited(area):
+	if area.is_in_group("baila"):
+		subirAmor=false
 	pass # Replace with function body.

@@ -11,13 +11,6 @@ var pagado = false
 var subirAmor = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
-	if direction:
-			$Area2D.add_to_group("adelanteauto")
-			$Area2D2.add_to_group("atrasauto")
-	else:
-			$Area2D.add_to_group("atrasauto")
-			$Area2D2.add_to_group("adelanteauto")
 	frame_coords=Vector2(0,modelo)
 	pass # Replace with function body.
 
