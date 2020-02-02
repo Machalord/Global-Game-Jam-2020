@@ -135,6 +135,7 @@ func _on_Area2D_area_entered(area):
 		if !pagado:
 			Global.money += pago
 			Global.money_aux+=pago
+			Global.amor += amor
 			Global.cantAutos +=1
 			print(Global.cantAutos)
 			pagado=true
