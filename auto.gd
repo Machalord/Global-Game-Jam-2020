@@ -9,24 +9,82 @@ var pago = 0
 var dolar=preload("res://dolar.tscn")
 var pagado = false
 var subirAmor = false
+var desvioderecha = false
+var desvioizquierda = false
+var valordesvioder=0
+var valordesvioizq=0
+var findesvio = false
+var findesvio2 = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
 	if direction:
 			$Area2D.add_to_group("adelanteauto")
 			$Area2D2.add_to_group("atrasauto")
+			$areafreno.queue_free()
+			$areafreno2.queue_free()
 	else:
 			$Area2D.add_to_group("atrasauto")
 			$Area2D2.add_to_group("adelanteauto")
+			$areafreno3.queue_free()
+			$areafreno4.queue_free()
 	frame_coords=Vector2(0,modelo)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+			
 	if subirAmor:
 		amor=15
 	if andar:
+		if !direction:
+			if findesvio:
+				if valordesvioder >0:
+					valordesvioder-=1
+					position=Vector2(position.x-valordesvioder,position.y-valordesvioder)
+	
+				elif valordesvioizq >0:
+					valordesvioizq-=1
+					position=Vector2(position.x+valordesvioizq,position.y+valordesvioizq)
+				else:
+					findesvio=false
+			if desvioderecha:
+				if valordesvioder<10:
+					position=Vector2(position.x+valordesvioder,position.y+valordesvioder)
+					valordesvioder+=1
+				else:
+					desvioderecha=false
+			if desvioizquierda:
+				if valordesvioizq<10:
+					position=Vector2(position.x-valordesvioizq,position.y-valordesvioizq)
+					valordesvioizq+=1
+				else:
+					desvioizquierda=false
+		if direction:
+			if findesvio2:
+				if valordesvioder >0:
+					valordesvioder-=1
+					position=Vector2(position.x-valordesvioder,position.y-valordesvioder)
+	
+				elif valordesvioizq >0:
+					valordesvioizq-=1
+					position=Vector2(position.x+valordesvioizq,position.y+valordesvioizq)
+				else:
+					findesvio2=false
+			if desvioderecha:
+				if valordesvioder<10:
+					position=Vector2(position.x+valordesvioder,position.y+valordesvioder)
+					valordesvioder+=1
+				else:
+					desvioderecha=false
+			if desvioizquierda:
+				if valordesvioizq<10:
+					position=Vector2(position.x-valordesvioizq,position.y-valordesvioizq)
+					valordesvioizq+=1
+				else:
+					desvioizquierda=false
 		$Timer.stop()
 		if direction:
 			frame_coords.x=0
@@ -100,6 +158,14 @@ func _on_Area2D2_area_entered(area):
 			instance_dolar()
 	if area.is_in_group("baila"):
 		amor=15
+	if area.is_in_group("desvioder"):
+		desvioderecha = true
+	if area.is_in_group("desvioizq"):
+		desvioizquierda = true
+	if area.is_in_group("findesvio"):
+		findesvio = true
+	if area.is_in_group("findesvio2"):
+		findesvio2 = true
 	pass # Replace with function body.
 
 

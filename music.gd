@@ -12,6 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if !stop:
-		$AudioStreamPlayer.play()
+		
+		$AudioStreamPlayer.volume_db=-15
 	else:
-		$AudioStreamPlayer.stop()
+		$AudioStreamPlayer.volume_db=-100
