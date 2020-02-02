@@ -454,7 +454,7 @@ margin_left = 42.0
 margin_top = 550.0
 margin_right = 164.0
 margin_bottom = 645.0
-price = 10
+price = 50
 tool_id = 1
 texture = ExtResource( 14 )
 
@@ -467,7 +467,7 @@ margin_left = 164.0
 margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
-price = 10
+price = 50
 tool_id = 6
 texture = ExtResource( 14 )
 
@@ -481,7 +481,7 @@ margin_left = 286.0
 margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
-price = 10
+price = 50
 tool_id = 7
 texture = ExtResource( 19 )
 
@@ -499,7 +499,7 @@ margin_left = -204.927
 margin_top = 303.073
 margin_right = -82.927
 margin_bottom = 398.073
-price = 20
+price = 100
 tool_id = 3
 texture = ExtResource( 16 )
 
@@ -512,7 +512,7 @@ margin_left = -82.927
 margin_top = 303.073
 margin_right = 39.073
 margin_bottom = 398.073
-price = 20
+price = 100
 tool_id = 2
 texture = ExtResource( 15 )
 
@@ -525,7 +525,7 @@ margin_left = 39.073
 margin_top = 303.073
 margin_right = 161.073
 margin_bottom = 398.073
-price = 20
+price = 100
 tool_id = 5
 texture = ExtResource( 12 )
 
@@ -567,7 +567,7 @@ margin_left = 286.0
 margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
-price = 10
+price = 20
 tool_id = 9
 texture = ExtResource( 13 )
 
