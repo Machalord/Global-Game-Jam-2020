@@ -16,8 +16,8 @@ func _ready():
 func _process(delta):
 	if visible:
 		$Label2.text="Money = $"+str(Global.money)
-		$Label3.text="Happiness = "+str((Global.money-Global.money_aux)/Global.cantAutos)
-	print("Happiness = "+str((Global.money-Global.money_aux)/Global.cantAutos))
+		$Label3.text="Happiness = "+str(((Global.money-Global.money_aux)/Global.cantAutos)*20)+"%"
+	print("Happiness = "+str(((Global.money-Global.money_aux)/Global.cantAutos)*20))
 #	pass
 
 
