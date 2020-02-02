@@ -4,7 +4,7 @@
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://game.gd" type="Script" id=3]
 [ext_resource path="res://cono.tscn" type="PackedScene" id=4]
-[ext_resource path="res://trees.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tree.png" type="Texture" id=5]
 [ext_resource path="res://Camera2D.gd" type="Script" id=6]
 [ext_resource path="res://TilesManager.gd" type="Script" id=7]
 [ext_resource path="res://escenas/seleccion.tscn" type="PackedScene" id=8]
@@ -24,28 +24,22 @@ extents = Vector2( 649.449, 41.182 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 633.626, 47.3554 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 30
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 12 )
-
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 100.468, 1257.16 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 126.418, 1345.27 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 1896, 129.556 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 2036.91, 152.436 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 171.648, 1708.45 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 272.088, 1388.22 )
 
 [node name="game" type="Node2D"]
@@ -94,7 +88,169 @@ direccion = false
 [node name="cono2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1041.92, 333.632 )
 
-[node name="trees" parent="." instance=ExtResource( 5 )]
+[node name="trees" type="Node2D" parent="."]
+position = Vector2( 791.898, 593.607 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="tree" type="Sprite" parent="trees"]
+position = Vector2( -125.625, -46.7786 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree3" type="Sprite" parent="trees"]
+position = Vector2( -746.952, -472.633 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree4" type="Sprite" parent="trees"]
+position = Vector2( -401.211, -667.323 )
+scale = Vector2( 0.900208, 0.913744 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree5" type="Sprite" parent="trees"]
+position = Vector2( 362.909, -99.392 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree2" type="Sprite" parent="trees"]
+position = Vector2( -63.6253, -397.967 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree10" type="Sprite" parent="trees"]
+position = Vector2( -1235.26, 528.587 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree9" type="Sprite" parent="trees"]
+position = Vector2( -1856.58, 102.732 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree8" type="Sprite" parent="trees"]
+position = Vector2( -1510.84, -91.9573 )
+scale = Vector2( 0.900208, 0.913744 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree7" type="Sprite" parent="trees"]
+position = Vector2( -746.724, 475.973 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree6" type="Sprite" parent="trees"]
+position = Vector2( -1173.26, 177.399 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree15" type="Sprite" parent="trees"]
+position = Vector2( -2121.14, 948.697 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree14" type="Sprite" parent="trees"]
+position = Vector2( -2742.46, 522.84 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree13" type="Sprite" parent="trees"]
+position = Vector2( -2396.72, 328.151 )
+scale = Vector2( 0.900208, 0.913744 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree12" type="Sprite" parent="trees"]
+position = Vector2( -1632.6, 896.084 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree11" type="Sprite" parent="trees"]
+position = Vector2( -2059.14, 597.511 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree20" type="Sprite" parent="trees"]
+position = Vector2( 586.736, -361.86 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree19" type="Sprite" parent="trees"]
+position = Vector2( -34.596, -787.714 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree18" type="Sprite" parent="trees"]
+position = Vector2( 311.149, -982.404 )
+scale = Vector2( 0.900208, 0.913744 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree17" type="Sprite" parent="trees"]
+position = Vector2( 1075.27, -414.473 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree16" type="Sprite" parent="trees"]
+position = Vector2( 648.736, -713.047 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree25" type="Sprite" parent="trees"]
+position = Vector2( 1472.62, -804.799 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree24" type="Sprite" parent="trees"]
+position = Vector2( 851.283, -1230.65 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
+
+[node name="tree23" type="Sprite" parent="trees"]
+position = Vector2( 1197.03, -1425.34 )
+scale = Vector2( 0.900208, 0.913744 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree22" type="Sprite" parent="trees"]
+position = Vector2( 1961.15, -857.413 )
+scale = Vector2( 0.821935, 0.939539 )
+z_index = 2
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="tree21" type="Sprite" parent="trees"]
+position = Vector2( 1534.62, -1155.99 )
+scale = Vector2( 1.33333, 1.33333 )
+z_index = 2
+texture = ExtResource( 5 )
 
 [node name="CameraControl" type="Node2D" parent="."]
 position = Vector2( 522.385, 402.602 )
@@ -133,36 +289,6 @@ current = true
 editor_draw_screen = false
 editor_draw_limits = true
 
-[node name="datos" type="Sprite" parent="CameraControl"]
-position = Vector2( -347.367, -296.932 )
-scale = Vector2( 0.736984, 0.736984 )
-z_index = 5
-texture = ExtResource( 13 )
-
-[node name="Label" type="Label" parent="CameraControl/datos"]
-margin_left = 203.587
-margin_top = -1.54147
-margin_right = 273.587
-margin_bottom = 35.4585
-custom_fonts/font = SubResource( 5 )
-text = "8:00"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="CameraControl/datos"]
-margin_left = 3.4559
-margin_top = -1.54147
-margin_right = 73.4559
-margin_bottom = 35.4585
-custom_fonts/font = SubResource( 5 )
-text = "8:00"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Hud" parent="CameraControl" instance=ExtResource( 10 )]
 position = Vector2( -640, -360 )
 z_index = 20
@@ -185,6 +311,17 @@ text = "3"
 margin_left = 362.061
 margin_right = 496.061
 
+[node name="panels" parent="CameraControl/Hud" index="4"]
+margin_left = 856.261
+margin_right = 856.261
+
+[node name="panel_buttons" parent="CameraControl/Hud" index="5"]
+position = Vector2( 856.261, 32.0055 )
+
+[node name="buttons" parent="CameraControl/Hud" index="6"]
+margin_left = 856.261
+margin_right = 896.261
+
 [node name="peaje2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1332.82, 1223.44 )
 
@@ -195,7 +332,7 @@ position = Vector2( -1614.89, 614.523 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limiteizq"]
 position = Vector2( 4.9043, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="limiteder" type="Area2D" parent="." groups=[
 "areader",
@@ -203,7 +340,7 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limiteder"]
 position = Vector2( 2122.13, 718.074 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="limitearriba" type="Area2D" parent="." groups=[
 "areaup",
@@ -211,7 +348,7 @@ shape = SubResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limitearriba"]
 position = Vector2( 278.184, -526.242 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="limiteabajo" type="Area2D" parent="." groups=[
 "areadown",
@@ -219,7 +356,7 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limiteabajo"]
 position = Vector2( 278.184, 1527.25 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="seleccion" parent="." instance=ExtResource( 8 )]
 
@@ -230,7 +367,7 @@ position = Vector2( -2995.53, 1954.77 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 106.745, -433.651 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="Area2D2" type="Area2D" parent="." groups=[
 "borrar",
@@ -238,7 +375,7 @@ shape = SubResource( 10 )
 position = Vector2( 3282.41, -893.989 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 120.0

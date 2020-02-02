@@ -589,8 +589,9 @@ anims/show = SubResource( 4 )
 [node name="optionsmenu" type="Control" parent="."]
 pause_mode = 2
 visible = false
+margin_top = -93.0784
 margin_right = 40.0
-margin_bottom = 40.0
+margin_bottom = -53.0784
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
