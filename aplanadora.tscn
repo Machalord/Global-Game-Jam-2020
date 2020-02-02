@@ -8,6 +8,7 @@
 radius = 19.9337
 
 [node name="aplanadora" type="Sprite"]
+pause_mode = 1
 position = Vector2( 1022.7, 64.378 )
 texture = ExtResource( 1 )
 

@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://escenas/MainMenuHud.gd" type="Script" id=1]
+[ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://logo.png" type="Texture" id=3]
+[ext_resource path="res://escenas/optionsmenu.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 46
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="MainMenuHud" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="TextureRect" parent="menu"]
+margin_left = 190.0
+margin_top = 100.0
+margin_right = 1090.0
+margin_bottom = 228.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newgame" type="Button" parent="menu"]
+margin_left = 450.0
+margin_top = 334.269
+margin_right = 805.0
+margin_bottom = 419.269
+custom_fonts/font = SubResource( 1 )
+text = "New Game"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="Button" parent="menu"]
+margin_left = 533.0
+margin_top = 426.0
+margin_right = 725.0
+margin_bottom = 488.0
+custom_fonts/font = SubResource( 2 )
+text = "Options"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="Button" parent="menu"]
+margin_left = 450.0
+margin_top = 495.767
+margin_right = 800.0
+margin_bottom = 580.766
+custom_fonts/font = SubResource( 2 )
+text = "Exit Game"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="optionsmenu" parent="." instance=ExtResource( 4 )]
+[connection signal="pressed" from="menu/newgame" to="." method="_on_newgame_pressed"]
+[connection signal="pressed" from="menu/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="menu/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="optionsmenu/back" to="." method="_on_back_pressed"]
+
+[editable path="optionsmenu"]
