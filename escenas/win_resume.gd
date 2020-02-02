@@ -8,18 +8,22 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label2.text="Money = $"+str(Global.money)
-	$Label2.text="Happiness = $"
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(delta):
+	if visible:
+		$Label2.text="Money = $"+str(Global.money)
+		$Label3.text="Happiness = "+str((Global.money-Global.money_aux)/Global.cantAutos)
+	print("Happiness = "+str((Global.money-Global.money_aux)/Global.cantAutos))
 #	pass
 
 
 func _on_Button_pressed():
-	
+	get_tree().paused = false
 	Global.dia+=1
+	Global.newday=true
 	get_tree().change_scene("res://game.tscn")
 	pass # Replace with function body.

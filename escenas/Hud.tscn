@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://datos.png" type="Texture" id=1]
 [ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://button2.png" type="Texture" id=25]
 [ext_resource path="res://sound/click.ogg" type="AudioStream" id=26]
 [ext_resource path="res://sound/click2.ogg" type="AudioStream" id=27]
+[ext_resource path="res://escenas/win_resume.tscn" type="PackedScene" id=28]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -453,7 +454,7 @@ margin_left = 42.0
 margin_top = 550.0
 margin_right = 164.0
 margin_bottom = 645.0
-price = 50
+price = 10
 tool_id = 1
 texture = ExtResource( 14 )
 
@@ -466,7 +467,7 @@ margin_left = 164.0
 margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
-price = 50
+price = 10
 tool_id = 6
 texture = ExtResource( 14 )
 
@@ -480,7 +481,7 @@ margin_left = 286.0
 margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
-price = 50
+price = 10
 tool_id = 7
 texture = ExtResource( 19 )
 
@@ -498,7 +499,7 @@ margin_left = -204.927
 margin_top = 303.073
 margin_right = -82.927
 margin_bottom = 398.073
-price = 100
+price = 20
 tool_id = 3
 texture = ExtResource( 16 )
 
@@ -511,7 +512,7 @@ margin_left = -82.927
 margin_top = 303.073
 margin_right = 39.073
 margin_bottom = 398.073
-price = 100
+price = 20
 tool_id = 2
 texture = ExtResource( 15 )
 
@@ -524,7 +525,7 @@ margin_left = 39.073
 margin_top = 303.073
 margin_right = 161.073
 margin_bottom = 398.073
-price = 100
+price = 20
 tool_id = 5
 texture = ExtResource( 12 )
 
@@ -566,7 +567,7 @@ margin_left = 286.0
 margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
-price = 20
+price = 10
 tool_id = 9
 texture = ExtResource( 13 )
 
@@ -701,6 +702,9 @@ stream = ExtResource( 26 )
 
 [node name="click2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 27 )
+
+[node name="win_resume" parent="." instance=ExtResource( 28 )]
+visible = false
 [connection signal="pressed" from="panel_buttons/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="panel_buttons/Button2" to="." method="_on_Button_pressed" binds= [ 2 ]]
 [connection signal="pressed" from="panel_buttons/Button3" to="." method="_on_Button_pressed" binds= [ 3 ]]
