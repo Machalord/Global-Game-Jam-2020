@@ -63,7 +63,7 @@ func OnClick(position):
 						Global.money -= 1
 						Global.actionTimer = 0.2
 						var spawn = desvioInstance.instance()
-						spawn.position = position
+						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(20,80)
 						add_child(spawn)
 			Herramienta.bloqueo:# bloqueo = 8
 				if Global.money > 1:
@@ -76,7 +76,7 @@ func OnClick(position):
 						Global.money -= 1
 						Global.actionTimer = 0.2
 						var spawn = barricadaInstance.instance()
-						spawn.position = position
+						spawn.position = $TileMap.map_to_world(mapPos) + Vector2(0,64)
 						add_child(spawn)
 			Herramienta.obreroBaila: # BAILA = 7
 				if Global.money > 50:
