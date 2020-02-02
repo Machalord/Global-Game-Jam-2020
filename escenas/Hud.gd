@@ -7,6 +7,7 @@ extends Node2D
 var show=false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	pass # Replace with function body.
 
 func _process(delta):
@@ -17,7 +18,10 @@ func _process(delta):
 #	if get_global_mouse_position().y<position.y+550 and show:
 #		$AnimationPlayer.play("hide")
 #		show=false	
-		
+	if Input.is_action_just_pressed("pause"):
+		get_tree().paused !=get_tree().paused 
+	if Input.is_action_just_pressed("options"):	
+		$optionsmenu.visible=!$optionsmenu.visible
 	pass
 
 func _on_Button_pressed(current_panel):
@@ -48,3 +52,18 @@ func _on_Button_pressed(current_panel):
 #		$AnimationPlayer.play("show")
 #		show=true	
 #	pass # Replace with function body.
+
+
+func _on_back_pressed():
+	$optionsmenu.visible=false
+	pass # Replace with function body.
+
+
+func _on_showoptions_pressed():
+	$optionsmenu.visible=true
+	pass # Replace with function body.
+
+
+func _on_mainmenu_pressed():
+	get_tree().change_scene("res://escenas/Menu.tscn")
+	pass # Replace with function body.

@@ -8,6 +8,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$optionsmenu/volumeslider.value=AudioServer.get_bus_volume_db(0)
+	$optionsmenu/CheckBox.pressed=OS.window_fullscreen
 	pass # Replace with function body.
 
 
@@ -40,4 +42,9 @@ func _on_back_pressed():
 func _on_options_pressed():
 	$menu.visible=false
 	$optionsmenu.visible=true
+	pass # Replace with function body.
+
+
+func _on_CheckBox_pressed():
+	OS.window_fullscreen = !OS.window_fullscreen
 	pass # Replace with function body.
