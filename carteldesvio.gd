@@ -11,10 +11,11 @@ func _process(delta):
 		queue_free()
 	pass
 
-func _on_Area2D_mouse_entered():
+func _on_AreaClick_mouse_entered():
 	mouseInArea = true
 	pass # Replace with function body.
 
-func _on_Area2D_mouse_exited():
+
+func _on_AreaClick_mouse_exited():
 	mouseInArea = false
 	pass # Replace with function body.

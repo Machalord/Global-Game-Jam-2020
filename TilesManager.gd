@@ -16,6 +16,5 @@ func SetNodeTipe(pos,tipo):
 
 func EstaMalHecho(posicion):
 	var val = get_cellv( world_to_map(posicion))
-	print(val)
-	return val != 0 
+	return val != 0 && val != 6
 

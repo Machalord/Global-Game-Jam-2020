@@ -4,10 +4,13 @@
 [ext_resource path="res://cartel3.png" type="Texture" id=2]
 [ext_resource path="res://sound/cartel.ogg" type="AudioStream" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 202.977
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 61.1927
+height = 266.334
 
-[node name="cartel3" type="Sprite"]
+[node name="cartel3" type="Sprite" groups=[
+"Conos",
+]]
 position = Vector2( -455.111, 1052.84 )
 scale = Vector2( 0.399507, 0.399507 )
 texture = ExtResource( 2 )
@@ -18,6 +21,7 @@ script = ExtResource( 1 )
 ]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = -1.01927
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
