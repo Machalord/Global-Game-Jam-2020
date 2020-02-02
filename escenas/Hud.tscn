@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/hud_money.png" type="Texture" id=1]
 [ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://aplanadora.png" type="Texture" id=15]
 [ext_resource path="res://laQuePinta.png" type="Texture" id=16]
 [ext_resource path="res://cono.png" type="Texture" id=17]
+[ext_resource path="res://obrero carretilla.png" type="Texture" id=18]
+[ext_resource path="res://obrero baila.png" type="Texture" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -408,12 +410,13 @@ margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
 price = 50
-tool_id = 1
+tool_id = 6
 texture = ExtResource( 14 )
 
 [node name="icon" parent="buttons/buttons3/button7" index="0"]
 scale = Vector2( 1, 1 )
-texture = ExtResource( 14 )
+texture = ExtResource( 18 )
+hframes = 2
 
 [node name="button6" parent="buttons/buttons3" instance=ExtResource( 11 )]
 margin_left = 286.0
@@ -422,11 +425,12 @@ margin_right = 408.0
 margin_bottom = 645.0
 price = 50
 tool_id = 1
-texture = ExtResource( 14 )
+texture = ExtResource( 19 )
 
 [node name="icon" parent="buttons/buttons3/button6" index="0"]
 scale = Vector2( 1, 1 )
-texture = ExtResource( 14 )
+texture = ExtResource( 19 )
+hframes = 6
 
 [node name="buttons2" type="Node2D" parent="buttons"]
 visible = false

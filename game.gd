@@ -30,7 +30,7 @@ func OnClick(position):
 			break
 	
 	if not ocupado:
-		if Global.herramienta == Herramienta.cono and Global.money > 10 and Global.actionTimer < 0:
+		if Global.herramienta == Herramienta.cono and Global.money > 1 and Global.actionTimer < 0:
 			var hayCono = false;
 			for n in get_tree().get_nodes_in_group("Conos"):
 				if n.isMouseOver() :
@@ -42,6 +42,13 @@ func OnClick(position):
 				var spawn = conoInstance.instance()
 				spawn.position = position
 				add_child(spawn)
+				
+		if Global.herramienta == Herramienta.obreroBaila and Global.money > 50 and Global.actionTimer < 0:
+				Global.money -=50
+				Global.actionTimer = 0.2
+				var spawn = conoInstance.instance()
+				spawn.position = position
+				add_child(spawn)		
 		else:
 			match(id):
 				1:#SI ES UN TILE DE BACHE
@@ -92,4 +99,5 @@ enum Herramienta{
 	cono = 4,
 	volcador = 5
 	obreroCarretilla=6
+	obreroBaila=7
 }
