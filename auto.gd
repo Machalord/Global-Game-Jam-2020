@@ -81,6 +81,7 @@ func _on_Area2D_area_entered(area):
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto") or area.is_in_group("peaje"):
 		andar=true
+
 	if area.is_in_group("baila"):
 		subirAmor=false
 	pass # Replace with function body.
@@ -105,6 +106,7 @@ func _on_Area2D2_area_entered(area):
 func _on_Area2D2_area_exited(area):
 	if area.is_in_group("cono") or area.is_in_group("atrasauto")or area.is_in_group("peaje"):
 		andar=true
+		
 	if area.is_in_group("maquina"):
 		explotar=true
 		area.get_parent().get_parent().queue_free()
