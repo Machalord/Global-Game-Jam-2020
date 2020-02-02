@@ -6,6 +6,9 @@ var conoInstance = load("res://cono.tscn")
 var pintadoraInstance =load("res://laQuePinta.tscn")
 var obreromartilloInstance=load("res://obrero martillo.tscn")
 var obrerocarretillaInstance=load("res://obrero caretilla.tscn")
+var obreroquebailaInstance=load("res://obrero baila.tscn")
+var desvioInstance=load("res://carteldesvio.tscn")
+var barricadaInstance=load("res://cartel3.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,7 +54,7 @@ func OnClick(position):
 		if Global.herramienta == Herramienta.obreroBaila and Global.money > 50 and Global.actionTimer < 0:
 				Global.money -=50
 				Global.actionTimer = 0.2
-				var spawn = conoInstance.instance()
+				var spawn = obreroquebailaInstance.instance()
 				spawn.position = position
 				add_child(spawn)		
 		else:
