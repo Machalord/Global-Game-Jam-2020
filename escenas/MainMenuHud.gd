@@ -36,6 +36,7 @@ func _on_SilenceMusic_pressed():
 func _on_back_pressed():
 	$menu.visible=true
 	$optionsmenu.visible=false
+	get_tree().paused =false
 	pass # Replace with function body.
 
 

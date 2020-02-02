@@ -18,10 +18,11 @@ func _process(delta):
 #	if get_global_mouse_position().y<position.y+550 and show:
 #		$AnimationPlayer.play("hide")
 #		show=false	
-	if Input.is_action_just_pressed("pause"):
-		get_tree().paused !=get_tree().paused 
+	if Input.is_action_just_pressed("pausa"):
+		get_tree().paused =!get_tree().paused
 	if Input.is_action_just_pressed("options"):	
 		$optionsmenu.visible=!$optionsmenu.visible
+		get_tree().paused =!get_tree().paused
 	pass
 
 func _on_Button_pressed(current_panel):
@@ -56,14 +57,17 @@ func _on_Button_pressed(current_panel):
 
 func _on_back_pressed():
 	$optionsmenu.visible=false
+	get_tree().paused =false
 	pass # Replace with function body.
 
 
 func _on_showoptions_pressed():
 	$optionsmenu.visible=true
+	get_tree().paused =true
 	pass # Replace with function body.
 
 
 func _on_mainmenu_pressed():
 	get_tree().change_scene("res://escenas/Menu.tscn")
+	get_tree().paused =false
 	pass # Replace with function body.
