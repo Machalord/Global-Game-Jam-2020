@@ -15,9 +15,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if visible:
-		$Label2.text="Money = $"+str(Global.money)
-		$Label3.text="Happiness = "+str((Global.money-Global.money_aux)/Global.cantAutos)
-	print("Happiness = "+str((Global.money-Global.money_aux)/Global.cantAutos))
+		$Label2.text="Remaining Money = $"+str(Global.money)
+		$Label3.text="Earnings of the day = "+str(Global.money_aux)
 #	pass
 
 
