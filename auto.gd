@@ -40,7 +40,7 @@ func _process(delta):
 	if subirAmor && amor < 100:
 		amor += 20 * delta
 	if andar:
-		if tileMap.EstaMalHecho(position):
+		if tileMap.EstaMalHecho(position) && amor > 0:
 			amor -= 10 * delta
 		if !direction:
 			if findesvio:
@@ -163,8 +163,6 @@ func _on_Area2D2_area_entered(area):
 			
 			pagado=true
 			instance_dolar()
-	if area.is_in_group("baila"):
-		amor=15
 	if area.is_in_group("desvioder"):
 		desvioderecha = true
 	if area.is_in_group("desvioizq"):
@@ -201,7 +199,8 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func _on_Timer_timeout():
 	$Timer.start()
-	amor-=5
+	if amor > 0:
+		amor -= 5
 	pass # Replace with function body.
 
 
