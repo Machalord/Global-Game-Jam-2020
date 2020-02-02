@@ -8,16 +8,11 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$volumeslider.value=AudioServer.get_bus_volume_db(0)
-	$CheckBox.pressed=OS.window_fullscreen
+	$Label2.text="Money = $"+str(Global.money)
+	$Label2.text="Happiness = $"
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_CheckBox_pressed():
-	OS.window_fullscreen = !OS.window_fullscreen
-	pass # Replace with function body.
+#func _process(delta):
+#	pass

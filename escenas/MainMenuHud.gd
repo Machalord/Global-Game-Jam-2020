@@ -27,12 +27,6 @@ func _on_quit_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
 
-
-func _on_SilenceMusic_pressed():
-	AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0))
-	pass # Replace with function body.
-
-
 func _on_back_pressed():
 	$menu.visible=true
 	$optionsmenu.visible=false

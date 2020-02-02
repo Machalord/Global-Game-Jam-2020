@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://assets/hud_money.png" type="Texture" id=1]
+[ext_resource path="res://datos.png" type="Texture" id=1]
 [ext_resource path="res://assets/Jellee-Roman.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/panel1.png" type="Texture" id=3]
 [ext_resource path="res://escenas/Hud.gd" type="Script" id=4]
@@ -22,6 +22,9 @@
 [ext_resource path="res://panelopciones.png" type="Texture" id=20]
 [ext_resource path="res://Jellee-Roman.ttf" type="DynamicFontData" id=21]
 [ext_resource path="res://escenas/optionsmenu.gd" type="Script" id=22]
+[ext_resource path="res://cartel3.png" type="Texture" id=23]
+[ext_resource path="res://cartel.png" type="Texture" id=24]
+[ext_resource path="res://button2.png" type="Texture" id=25]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -134,31 +137,53 @@ font_data = ExtResource( 21 )
 pause_mode = 2
 script = ExtResource( 4 )
 
-[node name="money" type="TextureRect" parent="."]
-anchor_left = 0.831
-anchor_top = 0.049
-anchor_right = 0.969
-anchor_bottom = 0.162
-margin_left = 39.7062
-margin_top = 41.2929
-margin_right = 216.706
-margin_bottom = 122.293
-rect_scale = Vector2( 0.75, 0.75 )
+[node name="datos" type="Sprite" parent="."]
+position = Vector2( 252.304, 61.4878 )
+scale = Vector2( 0.678854, 0.678854 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="money_label" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 39.7062
-margin_top = 41.2929
-margin_right = 173.706
-margin_bottom = 103.293
+margin_left = 44.7482
+margin_top = 42.2605
+margin_right = 178.748
+margin_bottom = 104.26
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "$100000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="day_label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 208.05
+margin_top = 40.3698
+margin_right = 342.05
+margin_bottom = 102.37
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Day 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="time_label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 350.605
+margin_top = 42.2605
+margin_right = 484.605
+margin_bottom = 104.26
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "20:00"
 align = 1
 valign = 1
 __meta__ = {
@@ -183,14 +208,14 @@ __meta__ = {
 position = Vector2( 0, -518 )
 
 [node name="panel2" type="TextureRect" parent="panels/panel2"]
-modulate = Color( 1, 0.654902, 0, 1 )
 anchor_left = 0.039
 anchor_right = 0.955
 anchor_bottom = 0.901
-margin_left = 50.0
-margin_top = 518.0
-margin_right = 1223.0
-margin_bottom = 700.0
+margin_left = 34.078
+margin_top = 492.987
+margin_right = 1207.08
+margin_bottom = 674.987
+rect_scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -200,14 +225,14 @@ __meta__ = {
 position = Vector2( 0, -518 )
 
 [node name="panel3" type="TextureRect" parent="panels/panel3"]
-modulate = Color( 0.0235294, 0.690196, 0.141176, 1 )
 anchor_left = 0.039
 anchor_right = 0.955
 anchor_bottom = 0.901
-margin_left = 50.0
-margin_top = 518.0
-margin_right = 1223.0
-margin_bottom = 700.0
+margin_left = 34.078
+margin_top = 493.107
+margin_right = 1207.08
+margin_bottom = 675.107
+rect_scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -251,13 +276,14 @@ __meta__ = {
 [node name="panel1" type="Node2D" parent="panels"]
 
 [node name="panel1" type="TextureRect" parent="panels/panel1"]
-modulate = Color( 0.878431, 0.0745098, 0.0745098, 1 )
 anchor_left = 0.039
 anchor_right = 0.955
 anchor_bottom = 0.901
-margin_left = 50.0
-margin_right = 1223.0
-margin_bottom = 182.0
+margin_left = 34.0778
+margin_top = -24.7677
+margin_right = 1207.08
+margin_bottom = 157.232
+rect_scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -268,9 +294,9 @@ position = Vector2( 872.013, 32.0055 )
 z_index = 31
 
 [node name="Button" type="Button" parent="panel_buttons"]
-margin_left = 61.8499
-margin_top = 520.0
-margin_right = 137.85
+margin_left = 60.0
+margin_top = 510.0
+margin_right = 160.0
 margin_bottom = 540.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -282,21 +308,24 @@ __meta__ = {
 [node name="Label" type="Label" parent="panel_buttons/Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.487671
-margin_right = 0.487671
+margin_left = 0.470215
+margin_top = -5.17126
+margin_right = 0.470215
+margin_bottom = -5.17126
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.952941, 0.921569, 0.921569, 1 )
 text = "Signs"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="panel_buttons"]
-margin_left = 151.947
-margin_top = 520.0
-margin_right = 227.947
-margin_bottom = 540.0
+margin_left = 178.0
+margin_top = 509.0
+margin_right = 285.0
+margin_bottom = 539.0
 focus_mode = 0
 enabled_focus_mode = 0
 flat = true
@@ -307,23 +336,24 @@ __meta__ = {
 [node name="Label2" type="Label" parent="panel_buttons/Button2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
-margin_top = 0.698364
-margin_right = 1.0
-margin_bottom = 0.698364
+margin_left = -0.337036
+margin_top = -3.85022
+margin_right = -0.337036
+margin_bottom = -3.85022
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.952941, 0.921569, 0.921569, 1 )
 text = "Machines"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button3" type="Button" parent="panel_buttons"]
-margin_left = 243.35
-margin_top = 520.0
-margin_right = 319.35
-margin_bottom = 540.0
+margin_left = 300.0
+margin_top = 508.0
+margin_right = 409.0
+margin_bottom = 537.0
 focus_mode = 0
 enabled_focus_mode = 0
 flat = true
@@ -334,12 +364,15 @@ __meta__ = {
 [node name="Label3" type="Label" parent="panel_buttons/Button3"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 0.950012
-margin_bottom = 0.950012
+margin_left = -0.945679
+margin_top = -2.10535
+margin_right = -0.945679
+margin_bottom = -2.10535
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.952941, 0.921569, 0.921569, 1 )
 text = "Workers"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -446,7 +479,7 @@ margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
 price = 50
-tool_id = 1
+tool_id = 7
 texture = ExtResource( 19 )
 
 [node name="icon" parent="buttons/buttons3/button6" index="0"]
@@ -519,12 +552,12 @@ margin_top = 550.0
 margin_right = 286.0
 margin_bottom = 645.0
 price = 5
-tool_id = 4
+tool_id = 8
 texture = ExtResource( 12 )
 
 [node name="icon" parent="buttons/buttons1/button2" index="0"]
-scale = Vector2( 1, 1 )
-texture = ExtResource( 17 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 23 )
 
 [node name="button3" parent="buttons/buttons1" instance=ExtResource( 11 )]
 margin_left = 286.0
@@ -532,12 +565,12 @@ margin_top = 550.0
 margin_right = 408.0
 margin_bottom = 645.0
 price = 20
-tool_id = 4
+tool_id = 9
 texture = ExtResource( 13 )
 
 [node name="icon" parent="buttons/buttons1/button3" index="0"]
-scale = Vector2( 1, 1 )
-texture = ExtResource( 17 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
 
 [node name="button4" parent="buttons/buttons1" instance=ExtResource( 11 )]
 visible = false
@@ -648,12 +681,14 @@ __meta__ = {
 }
 
 [node name="showoptions" type="Button" parent="."]
-margin_left = 1111.42
-margin_top = 24.6067
-margin_right = 1249.42
-margin_bottom = 70.6067
+margin_left = 1097.31
+margin_top = 44.3271
+margin_right = 1331.31
+margin_bottom = 124.327
+rect_scale = Vector2( 0.6, 0.6 )
 custom_fonts/font = SubResource( 7 )
-text = "Options"
+icon = ExtResource( 25 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

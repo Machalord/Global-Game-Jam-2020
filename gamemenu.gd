@@ -14,10 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
-	$CameraControl/Hud/time_label.text=String(int(20-$Timer.time_left/10))+":00"
-	$CameraControl/Hud/day_label.text=String(Global.dia)
-
+	
 	print(get_tree().get_nodes_in_group("auto").size())
 	if Input.is_action_just_pressed("MouseLeftClick"):
 		OnClick(get_global_mouse_position())
@@ -94,8 +91,7 @@ enum TileTipe{
 	bache = 1,
 	despintado = 2,
 	pasto = 3,
-	tierra = 4,
-	volcado = 5
+	tierra = 4
 }
 
 enum Herramienta{
@@ -105,12 +101,9 @@ enum Herramienta{
 	cono = 4,
 	volcador = 5
 	obreroCarretilla=6
-	obreroBaila=7,
-	bloqueo = 8,
-	desvio = 9
+	obreroBaila=7
 }
 
 
 func _on_Timer_timeout():
-
 	pass # Replace with function body.
