@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Camera2D.gd" type="Script" id=1]
-[ext_resource path="res://game.gd" type="Script" id=2]
+[ext_resource path="res://gamemenu.gd" type="Script" id=2]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://escenas/MainMenuHud.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenas/spawnAutosmenu.tscn" type="PackedScene" id=6]

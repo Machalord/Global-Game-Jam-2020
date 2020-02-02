@@ -14,7 +14,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#$Label.text=String(int(20-$Timer.time_left/10))+":00"
 	
 	print(get_tree().get_nodes_in_group("auto").size())
 	if Input.is_action_just_pressed("MouseLeftClick"):
